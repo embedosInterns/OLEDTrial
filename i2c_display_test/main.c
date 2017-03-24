@@ -212,7 +212,7 @@ int main(void)
 	display_draw_string(19,10,"EmbedoS1",0);
 	display_draw_string(35,40,"OLED",0);
 	ssd1306_draw_buffer(display_buffer);
-	_delay_ms(200);
+	_delay_ms(100);
 	
 	while (1)
 	{

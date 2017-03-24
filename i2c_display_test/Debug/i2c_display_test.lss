@@ -1,0 +1,3818 @@
+
+i2c_display_test.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000030b6  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000014  00800060  000030b6  0000314a  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000402  00800074  00800074  0000315e  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  0000315e  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00003190  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 000000e0  00000000  00000000  000031cc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00000fe1  00000000  00000000  000032ac  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000433  00000000  00000000  0000428d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00000822  00000000  00000000  000046c0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  0000031c  00000000  00000000  00004ee4  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    000003c8  00000000  00000000  00005200  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00001026  00000000  00000000  000055c8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 000000c8  00000000  00000000  000065ee  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+       0:	0c 94 b0 15 	jmp	0x2b60	; 0x2b60 <__ctors_end>
+       4:	0c 94 cd 15 	jmp	0x2b9a	; 0x2b9a <__bad_interrupt>
+       8:	0c 94 cd 15 	jmp	0x2b9a	; 0x2b9a <__bad_interrupt>
+       c:	0c 94 cd 15 	jmp	0x2b9a	; 0x2b9a <__bad_interrupt>
+      10:	0c 94 cd 15 	jmp	0x2b9a	; 0x2b9a <__bad_interrupt>
+      14:	0c 94 cd 15 	jmp	0x2b9a	; 0x2b9a <__bad_interrupt>
+      18:	0c 94 cd 15 	jmp	0x2b9a	; 0x2b9a <__bad_interrupt>
+      1c:	0c 94 cd 15 	jmp	0x2b9a	; 0x2b9a <__bad_interrupt>
+      20:	0c 94 cd 15 	jmp	0x2b9a	; 0x2b9a <__bad_interrupt>
+      24:	0c 94 cd 15 	jmp	0x2b9a	; 0x2b9a <__bad_interrupt>
+      28:	0c 94 cd 15 	jmp	0x2b9a	; 0x2b9a <__bad_interrupt>
+      2c:	0c 94 cd 15 	jmp	0x2b9a	; 0x2b9a <__bad_interrupt>
+      30:	0c 94 cd 15 	jmp	0x2b9a	; 0x2b9a <__bad_interrupt>
+      34:	0c 94 cd 15 	jmp	0x2b9a	; 0x2b9a <__bad_interrupt>
+      38:	0c 94 cd 15 	jmp	0x2b9a	; 0x2b9a <__bad_interrupt>
+      3c:	0c 94 cd 15 	jmp	0x2b9a	; 0x2b9a <__bad_interrupt>
+      40:	0c 94 cd 15 	jmp	0x2b9a	; 0x2b9a <__bad_interrupt>
+      44:	0c 94 cd 15 	jmp	0x2b9a	; 0x2b9a <__bad_interrupt>
+      48:	0c 94 cd 15 	jmp	0x2b9a	; 0x2b9a <__bad_interrupt>
+      4c:	0c 94 cd 15 	jmp	0x2b9a	; 0x2b9a <__bad_interrupt>
+      50:	0c 94 cd 15 	jmp	0x2b9a	; 0x2b9a <__bad_interrupt>
+
+00000054 <__trampolines_end>:
+      54:	0a 00       	.word	0x000a	; ????
+	...
+      c6:	00 00       	nop
+      c8:	04 00       	.word	0x0004	; ????
+	...
+      d6:	fe 00       	.word	0x00fe	; ????
+      d8:	67 00       	.word	0x0067	; ????
+      da:	00 00       	nop
+      dc:	7e 00       	.word	0x007e	; ????
+      de:	60 00       	.word	0x0060	; ????
+	...
+     13c:	07 00       	.word	0x0007	; ????
+     13e:	00 00       	nop
+     140:	00 00       	nop
+     142:	00 00       	nop
+     144:	7e 00       	.word	0x007e	; ????
+     146:	00 00       	nop
+     148:	00 00       	nop
+     14a:	1e 00       	.word	0x001e	; ????
+	...
+     15c:	7e 00       	.word	0x007e	; ????
+     15e:	00 00       	nop
+     160:	00 00       	nop
+     162:	1e 00       	.word	0x001e	; ????
+	...
+     1b0:	0b 00       	.word	0x000b	; ????
+     1b2:	20 00       	.word	0x0020	; ????
+     1b4:	02 00       	.word	0x0002	; ????
+     1b6:	00 00       	nop
+     1b8:	20 00       	.word	0x0020	; ????
+     1ba:	72 00       	.word	0x0072	; ????
+     1bc:	00 00       	nop
+     1be:	a0 00       	.word	0x00a0	; ????
+     1c0:	0f 00       	.word	0x000f	; ????
+     1c2:	00 00       	nop
+     1c4:	7c 00       	.word	0x007c	; ????
+     1c6:	02 00       	.word	0x0002	; ????
+     1c8:	00 00       	nop
+     1ca:	23 00       	.word	0x0023	; ????
+     1cc:	02 00       	.word	0x0002	; ????
+     1ce:	00 00       	nop
+     1d0:	20 00       	.word	0x0020	; ????
+     1d2:	02 00       	.word	0x0002	; ????
+     1d4:	00 00       	nop
+     1d6:	20 00       	.word	0x0020	; ????
+     1d8:	72 00       	.word	0x0072	; ????
+     1da:	00 00       	nop
+     1dc:	a0 00       	.word	0x00a0	; ????
+     1de:	0f 00       	.word	0x000f	; ????
+     1e0:	00 00       	nop
+     1e2:	7c 00       	.word	0x007c	; ????
+     1e4:	02 00       	.word	0x0002	; ????
+     1e6:	00 00       	nop
+     1e8:	23 00       	.word	0x0023	; ????
+     1ea:	02 00       	.word	0x0002	; ????
+     1ec:	00 00       	nop
+     1ee:	20 00       	.word	0x0020	; ????
+     1f0:	02 00       	.word	0x0002	; ????
+	...
+     222:	00 00       	nop
+     224:	0a 00       	.word	0x000a	; ????
+     226:	00 00       	nop
+     228:	00 00       	nop
+     22a:	00 00       	nop
+     22c:	38 00       	.word	0x0038	; ????
+     22e:	38 00       	.word	0x0038	; ????
+     230:	00 00       	nop
+     232:	7c 00       	.word	0x007c	; ????
+     234:	60 00       	.word	0x0060	; ????
+     236:	00 00       	nop
+     238:	e6 00       	.word	0x00e6	; ????
+     23a:	40 00       	.word	0x0040	; ????
+     23c:	00 00       	nop
+     23e:	c2 00       	.word	0x00c2	; ????
+     240:	40 00       	.word	0x0040	; ????
+     242:	00 00       	nop
+     244:	ff 00       	.word	0x00ff	; ????
+     246:	ff 00       	.word	0x00ff	; ????
+     248:	00 00       	nop
+     24a:	82 00       	.word	0x0082	; ????
+     24c:	41 00       	.word	0x0041	; ????
+     24e:	00 00       	nop
+     250:	06 00       	.word	0x0006	; ????
+     252:	63 00       	.word	0x0063	; ????
+     254:	00 00       	nop
+     256:	1c 00       	.word	0x001c	; ????
+     258:	3e 00       	.word	0x003e	; ????
+     25a:	00 00       	nop
+     25c:	00 00       	nop
+     25e:	1c 00       	.word	0x001c	; ????
+	...
+     298:	12 00       	.word	0x0012	; ????
+     29a:	78 00       	.word	0x0078	; ????
+     29c:	00 00       	nop
+     29e:	00 00       	nop
+     2a0:	fc 00       	.word	0x00fc	; ????
+     2a2:	00 00       	nop
+     2a4:	00 00       	nop
+     2a6:	86 00       	.word	0x0086	; ????
+     2a8:	01 00       	.word	0x0001	; ????
+     2aa:	00 00       	nop
+     2ac:	02 00       	.word	0x0002	; ????
+     2ae:	41 00       	.word	0x0041	; ????
+     2b0:	00 00       	nop
+     2b2:	86 00       	.word	0x0086	; ????
+     2b4:	21 00       	.word	0x0021	; ????
+     2b6:	00 00       	nop
+     2b8:	fc 00       	.word	0x00fc	; ????
+     2ba:	10 00       	.word	0x0010	; ????
+     2bc:	00 00       	nop
+     2be:	78 00       	.word	0x0078	; ????
+     2c0:	08 00       	.word	0x0008	; ????
+     2c2:	00 00       	nop
+     2c4:	00 00       	nop
+     2c6:	06 00       	.word	0x0006	; ????
+     2c8:	00 00       	nop
+     2ca:	00 00       	nop
+     2cc:	01 00       	.word	0x0001	; ????
+     2ce:	00 00       	nop
+     2d0:	80 00       	.word	0x0080	; ????
+     2d2:	00 00       	nop
+     2d4:	00 00       	nop
+     2d6:	60 00       	.word	0x0060	; ????
+     2d8:	00 00       	nop
+     2da:	00 00       	nop
+     2dc:	10 00       	.word	0x0010	; ????
+     2de:	1e 00       	.word	0x001e	; ????
+     2e0:	00 00       	nop
+     2e2:	08 00       	.word	0x0008	; ????
+     2e4:	3f 00       	.word	0x003f	; ????
+     2e6:	00 00       	nop
+     2e8:	84 00       	.word	0x0084	; ????
+     2ea:	61 00       	.word	0x0061	; ????
+     2ec:	00 00       	nop
+     2ee:	82 00       	.word	0x0082	; ????
+     2f0:	40 00       	.word	0x0040	; ????
+     2f2:	00 00       	nop
+     2f4:	80 00       	.word	0x0080	; ????
+     2f6:	61 00       	.word	0x0061	; ????
+     2f8:	00 00       	nop
+     2fa:	00 00       	nop
+     2fc:	3f 00       	.word	0x003f	; ????
+     2fe:	00 00       	nop
+     300:	00 00       	nop
+     302:	1e 00       	.word	0x001e	; ????
+	...
+     30c:	10 00       	.word	0x0010	; ????
+	...
+     316:	3c 00       	.word	0x003c	; ????
+     318:	00 00       	nop
+     31a:	00 00       	nop
+     31c:	7e 00       	.word	0x007e	; ????
+     31e:	00 00       	nop
+     320:	00 00       	nop
+     322:	61 00       	.word	0x0061	; ????
+     324:	00 00       	nop
+     326:	bc 00       	.word	0x00bc	; ????
+     328:	40 00       	.word	0x0040	; ????
+     32a:	00 00       	nop
+     32c:	fe 00       	.word	0x00fe	; ????
+     32e:	40 00       	.word	0x0040	; ????
+     330:	00 00       	nop
+     332:	c2 00       	.word	0x00c2	; ????
+     334:	43 00       	.word	0x0043	; ????
+     336:	00 00       	nop
+     338:	42 00       	.word	0x0042	; ????
+     33a:	27 00       	.word	0x0027	; ????
+     33c:	00 00       	nop
+     33e:	22 00       	.word	0x0022	; ????
+     340:	1e 00       	.word	0x001e	; ????
+     342:	00 00       	nop
+     344:	1c 00       	.word	0x001c	; ????
+     346:	3c 00       	.word	0x003c	; ????
+     348:	00 00       	nop
+     34a:	40 00       	.word	0x0040	; ????
+     34c:	32 00       	.word	0x0032	; ????
+     34e:	00 00       	nop
+     350:	c0 00       	.word	0x00c0	; ????
+     352:	61 00       	.word	0x0061	; ????
+     354:	00 00       	nop
+     356:	c0 00       	.word	0x00c0	; ????
+     358:	60 00       	.word	0x0060	; ????
+     35a:	00 00       	nop
+     35c:	40 00       	.word	0x0040	; ????
+     35e:	60 00       	.word	0x0060	; ????
+     360:	00 00       	nop
+     362:	00 00       	nop
+     364:	30 00       	.word	0x0030	; ????
+     366:	00 00       	nop
+     368:	00 00       	nop
+     36a:	10 00       	.word	0x0010	; ????
+	...
+     380:	03 00       	.word	0x0003	; ????
+     382:	00 00       	nop
+     384:	00 00       	nop
+     386:	00 00       	nop
+     388:	7e 00       	.word	0x007e	; ????
+     38a:	00 00       	nop
+     38c:	00 00       	nop
+     38e:	1e 00       	.word	0x001e	; ????
+	...
+     3f4:	07 00       	.word	0x0007	; ????
+     3f6:	00 00       	nop
+     3f8:	00 00       	nop
+     3fa:	00 00       	nop
+     3fc:	c0 00       	.word	0x00c0	; ????
+     3fe:	1f 00       	.word	0x001f	; ????
+     400:	00 00       	nop
+     402:	f0 00       	.word	0x00f0	; ????
+     404:	7f 00       	.word	0x007f	; ????
+     406:	00 00       	nop
+     408:	18 00       	.word	0x0018	; ????
+     40a:	e0 00       	.word	0x00e0	; ????
+     40c:	00 00       	nop
+     40e:	04 00       	.word	0x0004	; ????
+     410:	00 00       	nop
+     412:	01 00       	.word	0x0001	; ????
+     414:	02 00       	.word	0x0002	; ????
+     416:	00 00       	nop
+     418:	02 00       	.word	0x0002	; ????
+     41a:	01 00       	.word	0x0001	; ????
+     41c:	00 00       	nop
+     41e:	04 00       	.word	0x0004	; ????
+	...
+     468:	06 00       	.word	0x0006	; ????
+     46a:	01 00       	.word	0x0001	; ????
+     46c:	00 00       	nop
+     46e:	04 00       	.word	0x0004	; ????
+     470:	02 00       	.word	0x0002	; ????
+     472:	00 00       	nop
+     474:	02 00       	.word	0x0002	; ????
+     476:	04 00       	.word	0x0004	; ????
+     478:	00 00       	nop
+     47a:	01 00       	.word	0x0001	; ????
+     47c:	18 00       	.word	0x0018	; ????
+     47e:	c0 00       	.word	0x00c0	; ????
+     480:	00 00       	nop
+     482:	f0 00       	.word	0x00f0	; ????
+     484:	7f 00       	.word	0x007f	; ????
+     486:	00 00       	nop
+     488:	c0 00       	.word	0x00c0	; ????
+     48a:	1f 00       	.word	0x001f	; ????
+	...
+     4dc:	09 00       	.word	0x0009	; ????
+	...
+     4ea:	6c 00       	.word	0x006c	; ????
+     4ec:	00 00       	nop
+     4ee:	00 00       	nop
+     4f0:	6c 00       	.word	0x006c	; ????
+     4f2:	00 00       	nop
+     4f4:	00 00       	nop
+     4f6:	10 00       	.word	0x0010	; ????
+     4f8:	00 00       	nop
+     4fa:	00 00       	nop
+     4fc:	ff 00       	.word	0x00ff	; ????
+     4fe:	01 00       	.word	0x0001	; ????
+     500:	00 00       	nop
+     502:	10 00       	.word	0x0010	; ????
+     504:	00 00       	nop
+     506:	00 00       	nop
+     508:	6c 00       	.word	0x006c	; ????
+     50a:	00 00       	nop
+     50c:	00 00       	nop
+     50e:	6c 00       	.word	0x006c	; ????
+	...
+     550:	0b 00       	.word	0x000b	; ????
+     552:	80 00       	.word	0x0080	; ????
+     554:	00 00       	nop
+     556:	00 00       	nop
+     558:	80 00       	.word	0x0080	; ????
+     55a:	00 00       	nop
+     55c:	00 00       	nop
+     55e:	80 00       	.word	0x0080	; ????
+     560:	00 00       	nop
+     562:	00 00       	nop
+     564:	80 00       	.word	0x0080	; ????
+     566:	00 00       	nop
+     568:	00 00       	nop
+     56a:	80 00       	.word	0x0080	; ????
+     56c:	00 00       	nop
+     56e:	00 00       	nop
+     570:	fc 00       	.word	0x00fc	; ????
+     572:	1f 00       	.word	0x001f	; ????
+     574:	00 00       	nop
+     576:	80 00       	.word	0x0080	; ????
+     578:	00 00       	nop
+     57a:	00 00       	nop
+     57c:	80 00       	.word	0x0080	; ????
+     57e:	00 00       	nop
+     580:	00 00       	nop
+     582:	80 00       	.word	0x0080	; ????
+     584:	00 00       	nop
+     586:	00 00       	nop
+     588:	80 00       	.word	0x0080	; ????
+     58a:	00 00       	nop
+     58c:	00 00       	nop
+     58e:	80 00       	.word	0x0080	; ????
+	...
+     5c4:	04 00       	.word	0x0004	; ????
+	...
+     5ce:	60 00       	.word	0x0060	; ????
+     5d0:	02 00       	.word	0x0002	; ????
+     5d2:	00 00       	nop
+     5d4:	60 00       	.word	0x0060	; ????
+     5d6:	01 00       	.word	0x0001	; ????
+     5d8:	00 00       	nop
+     5da:	c0 00       	.word	0x00c0	; ????
+	...
+     638:	06 00       	.word	0x0006	; ????
+	...
+     642:	06 00       	.word	0x0006	; ????
+     644:	00 00       	nop
+     646:	00 00       	nop
+     648:	06 00       	.word	0x0006	; ????
+     64a:	00 00       	nop
+     64c:	00 00       	nop
+     64e:	06 00       	.word	0x0006	; ????
+     650:	00 00       	nop
+     652:	00 00       	nop
+     654:	06 00       	.word	0x0006	; ????
+     656:	00 00       	nop
+     658:	00 00       	nop
+     65a:	06 00       	.word	0x0006	; ????
+	...
+     6ac:	03 00       	.word	0x0003	; ????
+	...
+     6b6:	60 00       	.word	0x0060	; ????
+     6b8:	00 00       	nop
+     6ba:	00 00       	nop
+     6bc:	60 00       	.word	0x0060	; ????
+	...
+     71e:	00 00       	nop
+     720:	06 00       	.word	0x0006	; ????
+     722:	00 00       	nop
+     724:	60 00       	.word	0x0060	; ????
+     726:	00 00       	nop
+     728:	00 00       	nop
+     72a:	1c 00       	.word	0x001c	; ????
+     72c:	00 00       	nop
+     72e:	80 00       	.word	0x0080	; ????
+     730:	03 00       	.word	0x0003	; ????
+     732:	00 00       	nop
+     734:	70 00       	.word	0x0070	; ????
+     736:	00 00       	nop
+     738:	00 00       	nop
+     73a:	0e 00       	.word	0x000e	; ????
+     73c:	00 00       	nop
+     73e:	00 00       	nop
+     740:	01 00       	.word	0x0001	; ????
+	...
+     792:	00 00       	nop
+     794:	0a 00       	.word	0x000a	; ????
+     796:	00 00       	nop
+     798:	00 00       	nop
+     79a:	00 00       	nop
+     79c:	e0 00       	.word	0x00e0	; ????
+     79e:	07 00       	.word	0x0007	; ????
+     7a0:	00 00       	nop
+     7a2:	f8 00       	.word	0x00f8	; ????
+     7a4:	1f 00       	.word	0x001f	; ????
+     7a6:	00 00       	nop
+     7a8:	0c 00       	.word	0x000c	; ????
+     7aa:	30 00       	.word	0x0030	; ????
+     7ac:	00 00       	nop
+     7ae:	02 00       	.word	0x0002	; ????
+     7b0:	40 00       	.word	0x0040	; ????
+     7b2:	00 00       	nop
+     7b4:	02 00       	.word	0x0002	; ????
+     7b6:	40 00       	.word	0x0040	; ????
+     7b8:	00 00       	nop
+     7ba:	02 00       	.word	0x0002	; ????
+     7bc:	40 00       	.word	0x0040	; ????
+     7be:	00 00       	nop
+     7c0:	0c 00       	.word	0x000c	; ????
+     7c2:	30 00       	.word	0x0030	; ????
+     7c4:	00 00       	nop
+     7c6:	f8 00       	.word	0x00f8	; ????
+     7c8:	1f 00       	.word	0x001f	; ????
+     7ca:	00 00       	nop
+     7cc:	e0 00       	.word	0x00e0	; ????
+     7ce:	07 00       	.word	0x0007	; ????
+	...
+     808:	08 00       	.word	0x0008	; ????
+	...
+     816:	04 00       	.word	0x0004	; ????
+     818:	40 00       	.word	0x0040	; ????
+     81a:	00 00       	nop
+     81c:	04 00       	.word	0x0004	; ????
+     81e:	40 00       	.word	0x0040	; ????
+     820:	00 00       	nop
+     822:	fe 00       	.word	0x00fe	; ????
+     824:	7f 00       	.word	0x007f	; ????
+     826:	00 00       	nop
+     828:	fe 00       	.word	0x00fe	; ????
+     82a:	7f 00       	.word	0x007f	; ????
+     82c:	00 00       	nop
+     82e:	00 00       	nop
+     830:	40 00       	.word	0x0040	; ????
+     832:	00 00       	nop
+     834:	00 00       	nop
+     836:	40 00       	.word	0x0040	; ????
+	...
+     87c:	0a 00       	.word	0x000a	; ????
+     87e:	00 00       	nop
+     880:	00 00       	nop
+     882:	00 00       	nop
+     884:	18 00       	.word	0x0018	; ????
+     886:	40 00       	.word	0x0040	; ????
+     888:	00 00       	nop
+     88a:	0c 00       	.word	0x000c	; ????
+     88c:	60 00       	.word	0x0060	; ????
+     88e:	00 00       	nop
+     890:	06 00       	.word	0x0006	; ????
+     892:	70 00       	.word	0x0070	; ????
+     894:	00 00       	nop
+     896:	06 00       	.word	0x0006	; ????
+     898:	68 00       	.word	0x0068	; ????
+     89a:	00 00       	nop
+     89c:	06 00       	.word	0x0006	; ????
+     89e:	64 00       	.word	0x0064	; ????
+     8a0:	00 00       	nop
+     8a2:	0e 00       	.word	0x000e	; ????
+     8a4:	63 00       	.word	0x0063	; ????
+     8a6:	00 00       	nop
+     8a8:	fc 00       	.word	0x00fc	; ????
+     8aa:	60 00       	.word	0x0060	; ????
+     8ac:	00 00       	nop
+     8ae:	78 00       	.word	0x0078	; ????
+     8b0:	60 00       	.word	0x0060	; ????
+     8b2:	00 00       	nop
+     8b4:	00 00       	nop
+     8b6:	30 00       	.word	0x0030	; ????
+	...
+     8f0:	09 00       	.word	0x0009	; ????
+     8f2:	00 00       	nop
+     8f4:	00 00       	nop
+     8f6:	00 00       	nop
+     8f8:	08 00       	.word	0x0008	; ????
+     8fa:	60 00       	.word	0x0060	; ????
+     8fc:	00 00       	nop
+     8fe:	04 00       	.word	0x0004	; ????
+     900:	60 00       	.word	0x0060	; ????
+     902:	00 00       	nop
+     904:	82 00       	.word	0x0082	; ????
+     906:	40 00       	.word	0x0040	; ????
+     908:	00 00       	nop
+     90a:	c2 00       	.word	0x00c2	; ????
+     90c:	40 00       	.word	0x0040	; ????
+     90e:	00 00       	nop
+     910:	c6 00       	.word	0x00c6	; ????
+     912:	41 00       	.word	0x0041	; ????
+     914:	00 00       	nop
+     916:	be 00       	.word	0x00be	; ????
+     918:	23 00       	.word	0x0023	; ????
+     91a:	00 00       	nop
+     91c:	9c 00       	.word	0x009c	; ????
+     91e:	3f 00       	.word	0x003f	; ????
+     920:	00 00       	nop
+     922:	00 00       	nop
+     924:	0e 00       	.word	0x000e	; ????
+	...
+     962:	00 00       	nop
+     964:	0a 00       	.word	0x000a	; ????
+     966:	00 00       	nop
+     968:	06 00       	.word	0x0006	; ????
+     96a:	00 00       	nop
+     96c:	00 00       	nop
+     96e:	05 00       	.word	0x0005	; ????
+     970:	00 00       	nop
+     972:	80 00       	.word	0x0080	; ????
+     974:	04 00       	.word	0x0004	; ????
+     976:	00 00       	nop
+     978:	60 00       	.word	0x0060	; ????
+     97a:	04 00       	.word	0x0004	; ????
+     97c:	00 00       	nop
+     97e:	10 00       	.word	0x0010	; ????
+     980:	04 00       	.word	0x0004	; ????
+     982:	00 00       	nop
+     984:	08 00       	.word	0x0008	; ????
+     986:	04 00       	.word	0x0004	; ????
+     988:	00 00       	nop
+     98a:	fe 00       	.word	0x00fe	; ????
+     98c:	7f 00       	.word	0x007f	; ????
+     98e:	00 00       	nop
+     990:	fe 00       	.word	0x00fe	; ????
+     992:	7f 00       	.word	0x007f	; ????
+     994:	00 00       	nop
+     996:	00 00       	nop
+     998:	04 00       	.word	0x0004	; ????
+     99a:	00 00       	nop
+     99c:	00 00       	nop
+     99e:	04 00       	.word	0x0004	; ????
+	...
+     9d8:	09 00       	.word	0x0009	; ????
+	...
+     9e2:	60 00       	.word	0x0060	; ????
+     9e4:	00 00       	nop
+     9e6:	30 00       	.word	0x0030	; ????
+     9e8:	60 00       	.word	0x0060	; ????
+     9ea:	00 00       	nop
+     9ec:	3c 00       	.word	0x003c	; ????
+     9ee:	40 00       	.word	0x0040	; ????
+     9f0:	00 00       	nop
+     9f2:	76 00       	.word	0x0076	; ????
+     9f4:	40 00       	.word	0x0040	; ????
+     9f6:	00 00       	nop
+     9f8:	66 00       	.word	0x0066	; ????
+     9fa:	40 00       	.word	0x0040	; ????
+     9fc:	00 00       	nop
+     9fe:	e6 00       	.word	0x00e6	; ????
+     a00:	20 00       	.word	0x0020	; ????
+     a02:	00 00       	nop
+     a04:	c6 00       	.word	0x00c6	; ????
+     a06:	13 00       	.word	0x0013	; ????
+     a08:	00 00       	nop
+     a0a:	82 00       	.word	0x0082	; ????
+     a0c:	0f 00       	.word	0x000f	; ????
+	...
+     a4a:	00 00       	nop
+     a4c:	0a 00       	.word	0x000a	; ????
+     a4e:	00 00       	nop
+     a50:	00 00       	nop
+     a52:	00 00       	nop
+     a54:	80 00       	.word	0x0080	; ????
+     a56:	0f 00       	.word	0x000f	; ????
+     a58:	00 00       	nop
+     a5a:	e0 00       	.word	0x00e0	; ????
+     a5c:	3f 00       	.word	0x003f	; ????
+     a5e:	00 00       	nop
+     a60:	b0 00       	.word	0x00b0	; ????
+     a62:	30 00       	.word	0x0030	; ????
+     a64:	00 00       	nop
+     a66:	58 00       	.word	0x0058	; ????
+     a68:	40 00       	.word	0x0040	; ????
+     a6a:	00 00       	nop
+     a6c:	4c 00       	.word	0x004c	; ????
+     a6e:	40 00       	.word	0x0040	; ????
+     a70:	00 00       	nop
+     a72:	44 00       	.word	0x0044	; ????
+     a74:	40 00       	.word	0x0040	; ????
+     a76:	00 00       	nop
+     a78:	c2 00       	.word	0x00c2	; ????
+     a7a:	61 00       	.word	0x0061	; ????
+     a7c:	00 00       	nop
+     a7e:	82 00       	.word	0x0082	; ????
+     a80:	3f 00       	.word	0x003f	; ????
+     a82:	00 00       	nop
+     a84:	02 00       	.word	0x0002	; ????
+     a86:	0f 00       	.word	0x000f	; ????
+	...
+     ac0:	0a 00       	.word	0x000a	; ????
+     ac2:	00 00       	nop
+     ac4:	00 00       	nop
+     ac6:	00 00       	nop
+     ac8:	08 00       	.word	0x0008	; ????
+     aca:	00 00       	nop
+     acc:	00 00       	nop
+     ace:	06 00       	.word	0x0006	; ????
+     ad0:	00 00       	nop
+     ad2:	00 00       	nop
+     ad4:	06 00       	.word	0x0006	; ????
+     ad6:	00 00       	nop
+     ad8:	00 00       	nop
+     ada:	06 00       	.word	0x0006	; ????
+     adc:	40 00       	.word	0x0040	; ????
+     ade:	00 00       	nop
+     ae0:	06 00       	.word	0x0006	; ????
+     ae2:	38 00       	.word	0x0038	; ????
+     ae4:	00 00       	nop
+     ae6:	06 00       	.word	0x0006	; ????
+     ae8:	07 00       	.word	0x0007	; ????
+     aea:	00 00       	nop
+     aec:	e6 00       	.word	0x00e6	; ????
+     aee:	00 00       	nop
+     af0:	00 00       	nop
+     af2:	1e 00       	.word	0x001e	; ????
+     af4:	00 00       	nop
+     af6:	00 00       	nop
+     af8:	02 00       	.word	0x0002	; ????
+	...
+     b32:	00 00       	nop
+     b34:	0a 00       	.word	0x000a	; ????
+     b36:	00 00       	nop
+     b38:	00 00       	nop
+     b3a:	00 00       	nop
+     b3c:	38 00       	.word	0x0038	; ????
+     b3e:	1c 00       	.word	0x001c	; ????
+     b40:	00 00       	nop
+     b42:	7c 00       	.word	0x007c	; ????
+     b44:	3e 00       	.word	0x003e	; ????
+     b46:	00 00       	nop
+     b48:	e6 00       	.word	0x00e6	; ????
+     b4a:	62 00       	.word	0x0062	; ????
+     b4c:	00 00       	nop
+     b4e:	c2 00       	.word	0x00c2	; ????
+     b50:	41 00       	.word	0x0041	; ????
+     b52:	00 00       	nop
+     b54:	82 00       	.word	0x0082	; ????
+     b56:	41 00       	.word	0x0041	; ????
+     b58:	00 00       	nop
+     b5a:	82 00       	.word	0x0082	; ????
+     b5c:	43 00       	.word	0x0043	; ????
+     b5e:	00 00       	nop
+     b60:	46 00       	.word	0x0046	; ????
+     b62:	67 00       	.word	0x0067	; ????
+     b64:	00 00       	nop
+     b66:	7c 00       	.word	0x007c	; ????
+     b68:	3e 00       	.word	0x003e	; ????
+     b6a:	00 00       	nop
+     b6c:	38 00       	.word	0x0038	; ????
+     b6e:	1c 00       	.word	0x001c	; ????
+	...
+     ba8:	0a 00       	.word	0x000a	; ????
+     baa:	00 00       	nop
+     bac:	00 00       	nop
+     bae:	00 00       	nop
+     bb0:	f0 00       	.word	0x00f0	; ????
+     bb2:	40 00       	.word	0x0040	; ????
+     bb4:	00 00       	nop
+     bb6:	fc 00       	.word	0x00fc	; ????
+     bb8:	41 00       	.word	0x0041	; ????
+     bba:	00 00       	nop
+     bbc:	86 00       	.word	0x0086	; ????
+     bbe:	43 00       	.word	0x0043	; ????
+     bc0:	00 00       	nop
+     bc2:	02 00       	.word	0x0002	; ????
+     bc4:	22 00       	.word	0x0022	; ????
+     bc6:	00 00       	nop
+     bc8:	02 00       	.word	0x0002	; ????
+     bca:	32 00       	.word	0x0032	; ????
+     bcc:	00 00       	nop
+     bce:	02 00       	.word	0x0002	; ????
+     bd0:	12 00       	.word	0x0012	; ????
+     bd2:	00 00       	nop
+     bd4:	0c 00       	.word	0x000c	; ????
+     bd6:	0e 00       	.word	0x000e	; ????
+     bd8:	00 00       	nop
+     bda:	fc 00       	.word	0x00fc	; ????
+     bdc:	07 00       	.word	0x0007	; ????
+     bde:	00 00       	nop
+     be0:	f0 00       	.word	0x00f0	; ????
+     be2:	01 00       	.word	0x0001	; ????
+	...
+     c1c:	04 00       	.word	0x0004	; ????
+	...
+     c2a:	60 00       	.word	0x0060	; ????
+     c2c:	60 00       	.word	0x0060	; ????
+     c2e:	00 00       	nop
+     c30:	60 00       	.word	0x0060	; ????
+     c32:	60 00       	.word	0x0060	; ????
+	...
+     c90:	04 00       	.word	0x0004	; ????
+     c92:	00 00       	nop
+     c94:	00 00       	nop
+     c96:	00 00       	nop
+     c98:	60 00       	.word	0x0060	; ????
+     c9a:	60 00       	.word	0x0060	; ????
+     c9c:	02 00       	.word	0x0002	; ????
+     c9e:	60 00       	.word	0x0060	; ????
+     ca0:	60 00       	.word	0x0060	; ????
+     ca2:	01 00       	.word	0x0001	; ????
+     ca4:	00 00       	nop
+     ca6:	c0 00       	.word	0x00c0	; ????
+	...
+     d04:	0b 00       	.word	0x000b	; ????
+     d06:	80 00       	.word	0x0080	; ????
+     d08:	00 00       	nop
+     d0a:	00 00       	nop
+     d0c:	40 00       	.word	0x0040	; ????
+     d0e:	01 00       	.word	0x0001	; ????
+     d10:	00 00       	nop
+     d12:	40 00       	.word	0x0040	; ????
+     d14:	01 00       	.word	0x0001	; ????
+     d16:	00 00       	nop
+     d18:	20 00       	.word	0x0020	; ????
+     d1a:	02 00       	.word	0x0002	; ????
+     d1c:	00 00       	nop
+     d1e:	20 00       	.word	0x0020	; ????
+     d20:	02 00       	.word	0x0002	; ????
+     d22:	00 00       	nop
+     d24:	10 00       	.word	0x0010	; ????
+     d26:	04 00       	.word	0x0004	; ????
+     d28:	00 00       	nop
+     d2a:	10 00       	.word	0x0010	; ????
+     d2c:	04 00       	.word	0x0004	; ????
+     d2e:	00 00       	nop
+     d30:	10 00       	.word	0x0010	; ????
+     d32:	04 00       	.word	0x0004	; ????
+     d34:	00 00       	nop
+     d36:	08 00       	.word	0x0008	; ????
+     d38:	08 00       	.word	0x0008	; ????
+     d3a:	00 00       	nop
+     d3c:	08 00       	.word	0x0008	; ????
+     d3e:	08 00       	.word	0x0008	; ????
+     d40:	00 00       	nop
+     d42:	04 00       	.word	0x0004	; ????
+     d44:	10 00       	.word	0x0010	; ????
+	...
+     d76:	00 00       	nop
+     d78:	0c 00       	.word	0x000c	; ????
+     d7a:	20 00       	.word	0x0020	; ????
+     d7c:	02 00       	.word	0x0002	; ????
+     d7e:	00 00       	nop
+     d80:	20 00       	.word	0x0020	; ????
+     d82:	02 00       	.word	0x0002	; ????
+     d84:	00 00       	nop
+     d86:	20 00       	.word	0x0020	; ????
+     d88:	02 00       	.word	0x0002	; ????
+     d8a:	00 00       	nop
+     d8c:	20 00       	.word	0x0020	; ????
+     d8e:	02 00       	.word	0x0002	; ????
+     d90:	00 00       	nop
+     d92:	20 00       	.word	0x0020	; ????
+     d94:	02 00       	.word	0x0002	; ????
+     d96:	00 00       	nop
+     d98:	20 00       	.word	0x0020	; ????
+     d9a:	02 00       	.word	0x0002	; ????
+     d9c:	00 00       	nop
+     d9e:	20 00       	.word	0x0020	; ????
+     da0:	02 00       	.word	0x0002	; ????
+     da2:	00 00       	nop
+     da4:	20 00       	.word	0x0020	; ????
+     da6:	02 00       	.word	0x0002	; ????
+     da8:	00 00       	nop
+     daa:	20 00       	.word	0x0020	; ????
+     dac:	02 00       	.word	0x0002	; ????
+     dae:	00 00       	nop
+     db0:	20 00       	.word	0x0020	; ????
+     db2:	02 00       	.word	0x0002	; ????
+     db4:	00 00       	nop
+     db6:	20 00       	.word	0x0020	; ????
+     db8:	02 00       	.word	0x0002	; ????
+     dba:	00 00       	nop
+     dbc:	20 00       	.word	0x0020	; ????
+     dbe:	02 00       	.word	0x0002	; ????
+	...
+     dec:	0b 00       	.word	0x000b	; ????
+     dee:	04 00       	.word	0x0004	; ????
+     df0:	10 00       	.word	0x0010	; ????
+     df2:	00 00       	nop
+     df4:	08 00       	.word	0x0008	; ????
+     df6:	08 00       	.word	0x0008	; ????
+     df8:	00 00       	nop
+     dfa:	08 00       	.word	0x0008	; ????
+     dfc:	08 00       	.word	0x0008	; ????
+     dfe:	00 00       	nop
+     e00:	10 00       	.word	0x0010	; ????
+     e02:	04 00       	.word	0x0004	; ????
+     e04:	00 00       	nop
+     e06:	10 00       	.word	0x0010	; ????
+     e08:	04 00       	.word	0x0004	; ????
+     e0a:	00 00       	nop
+     e0c:	10 00       	.word	0x0010	; ????
+     e0e:	04 00       	.word	0x0004	; ????
+     e10:	00 00       	nop
+     e12:	20 00       	.word	0x0020	; ????
+     e14:	02 00       	.word	0x0002	; ????
+     e16:	00 00       	nop
+     e18:	20 00       	.word	0x0020	; ????
+     e1a:	02 00       	.word	0x0002	; ????
+     e1c:	00 00       	nop
+     e1e:	40 00       	.word	0x0040	; ????
+     e20:	01 00       	.word	0x0001	; ????
+     e22:	00 00       	nop
+     e24:	40 00       	.word	0x0040	; ????
+     e26:	01 00       	.word	0x0001	; ????
+     e28:	00 00       	nop
+     e2a:	80 00       	.word	0x0080	; ????
+	...
+     e60:	09 00       	.word	0x0009	; ????
+     e62:	00 00       	nop
+     e64:	00 00       	nop
+     e66:	00 00       	nop
+     e68:	38 00       	.word	0x0038	; ????
+     e6a:	00 00       	nop
+     e6c:	00 00       	nop
+     e6e:	34 00       	.word	0x0034	; ????
+     e70:	00 00       	nop
+     e72:	00 00       	nop
+     e74:	02 00       	.word	0x0002	; ????
+     e76:	00 00       	nop
+     e78:	00 00       	nop
+     e7a:	02 00       	.word	0x0002	; ????
+     e7c:	6c 00       	.word	0x006c	; ????
+     e7e:	00 00       	nop
+     e80:	02 00       	.word	0x0002	; ????
+     e82:	62 00       	.word	0x0062	; ????
+     e84:	00 00       	nop
+     e86:	86 00       	.word	0x0086	; ????
+     e88:	01 00       	.word	0x0001	; ????
+     e8a:	00 00       	nop
+     e8c:	fc 00       	.word	0x00fc	; ????
+     e8e:	00 00       	nop
+     e90:	00 00       	nop
+     e92:	38 00       	.word	0x0038	; ????
+	...
+     ed4:	13 00       	.word	0x0013	; ????
+     ed6:	00 00       	nop
+     ed8:	00 00       	nop
+     eda:	00 00       	nop
+     edc:	80 00       	.word	0x0080	; ????
+     ede:	3f 00       	.word	0x003f	; ????
+     ee0:	00 00       	nop
+     ee2:	e0 00       	.word	0x00e0	; ????
+     ee4:	c0 00       	.word	0x00c0	; ????
+     ee6:	00 00       	nop
+     ee8:	18 00       	.word	0x0018	; ????
+     eea:	00 00       	nop
+     eec:	01 00       	.word	0x0001	; ????
+     eee:	0c 00       	.word	0x000c	; ????
+     ef0:	00 00       	nop
+     ef2:	02 00       	.word	0x0002	; ????
+     ef4:	04 00       	.word	0x0004	; ????
+     ef6:	3c 00       	.word	0x003c	; ????
+     ef8:	04 00       	.word	0x0004	; ????
+     efa:	02 00       	.word	0x0002	; ????
+     efc:	7f 00       	.word	0x007f	; ????
+     efe:	04 00       	.word	0x0004	; ????
+     f00:	c2 00       	.word	0x00c2	; ????
+     f02:	43 00       	.word	0x0043	; ????
+     f04:	08 00       	.word	0x0008	; ????
+     f06:	e1 00       	.word	0x00e1	; ????
+     f08:	40 00       	.word	0x0040	; ????
+     f0a:	08 00       	.word	0x0008	; ????
+     f0c:	31 00       	.word	0x0031	; ????
+     f0e:	20 00       	.word	0x0020	; ????
+     f10:	08 00       	.word	0x0008	; ????
+     f12:	11 00       	.word	0x0011	; ????
+     f14:	20 00       	.word	0x0020	; ????
+     f16:	08 00       	.word	0x0008	; ????
+     f18:	11 00       	.word	0x0011	; ????
+     f1a:	78 00       	.word	0x0078	; ????
+     f1c:	08 00       	.word	0x0008	; ????
+     f1e:	21 00       	.word	0x0021	; ????
+     f20:	7e 00       	.word	0x007e	; ????
+     f22:	08 00       	.word	0x0008	; ????
+     f24:	e3 00       	.word	0x00e3	; ????
+     f26:	47 00       	.word	0x0047	; ????
+     f28:	04 00       	.word	0x0004	; ????
+     f2a:	72 00       	.word	0x0072	; ????
+     f2c:	40 00       	.word	0x0040	; ????
+     f2e:	04 00       	.word	0x0004	; ????
+     f30:	04 00       	.word	0x0004	; ????
+     f32:	20 00       	.word	0x0020	; ????
+     f34:	02 00       	.word	0x0002	; ????
+     f36:	18 00       	.word	0x0018	; ????
+     f38:	1c 00       	.word	0x001c	; ????
+     f3a:	01 00       	.word	0x0001	; ????
+     f3c:	e0 00       	.word	0x00e0	; ????
+     f3e:	83 00       	.word	0x0083	; ????
+     f40:	00 00       	nop
+     f42:	00 00       	nop
+     f44:	40 00       	.word	0x0040	; ????
+     f46:	00 00       	nop
+     f48:	0e 00       	.word	0x000e	; ????
+     f4a:	00 00       	nop
+     f4c:	40 00       	.word	0x0040	; ????
+     f4e:	00 00       	nop
+     f50:	00 00       	nop
+     f52:	60 00       	.word	0x0060	; ????
+     f54:	00 00       	nop
+     f56:	00 00       	nop
+     f58:	78 00       	.word	0x0078	; ????
+     f5a:	00 00       	nop
+     f5c:	00 00       	nop
+     f5e:	46 00       	.word	0x0046	; ????
+     f60:	00 00       	nop
+     f62:	80 00       	.word	0x0080	; ????
+     f64:	03 00       	.word	0x0003	; ????
+     f66:	00 00       	nop
+     f68:	70 00       	.word	0x0070	; ????
+     f6a:	02 00       	.word	0x0002	; ????
+     f6c:	00 00       	nop
+     f6e:	0c 00       	.word	0x000c	; ????
+     f70:	02 00       	.word	0x0002	; ????
+     f72:	00 00       	nop
+     f74:	1e 00       	.word	0x001e	; ????
+     f76:	02 00       	.word	0x0002	; ????
+     f78:	00 00       	nop
+     f7a:	f8 00       	.word	0x00f8	; ????
+     f7c:	02 00       	.word	0x0002	; ????
+     f7e:	00 00       	nop
+     f80:	e0 00       	.word	0x00e0	; ????
+     f82:	47 00       	.word	0x0047	; ????
+     f84:	00 00       	nop
+     f86:	00 00       	nop
+     f88:	7f 00       	.word	0x007f	; ????
+     f8a:	00 00       	nop
+     f8c:	00 00       	nop
+     f8e:	78 00       	.word	0x0078	; ????
+     f90:	00 00       	nop
+     f92:	00 00       	nop
+     f94:	60 00       	.word	0x0060	; ????
+     f96:	00 00       	nop
+     f98:	00 00       	nop
+     f9a:	40 00       	.word	0x0040	; ????
+	...
+     fbc:	0d 00       	.word	0x000d	; ????
+     fbe:	02 00       	.word	0x0002	; ????
+     fc0:	40 00       	.word	0x0040	; ????
+     fc2:	00 00       	nop
+     fc4:	02 00       	.word	0x0002	; ????
+     fc6:	40 00       	.word	0x0040	; ????
+     fc8:	00 00       	nop
+     fca:	fe 00       	.word	0x00fe	; ????
+     fcc:	7f 00       	.word	0x007f	; ????
+     fce:	00 00       	nop
+     fd0:	fe 00       	.word	0x00fe	; ????
+     fd2:	7f 00       	.word	0x007f	; ????
+     fd4:	00 00       	nop
+     fd6:	82 00       	.word	0x0082	; ????
+     fd8:	40 00       	.word	0x0040	; ????
+     fda:	00 00       	nop
+     fdc:	82 00       	.word	0x0082	; ????
+     fde:	40 00       	.word	0x0040	; ????
+     fe0:	00 00       	nop
+     fe2:	82 00       	.word	0x0082	; ????
+     fe4:	40 00       	.word	0x0040	; ????
+     fe6:	00 00       	nop
+     fe8:	82 00       	.word	0x0082	; ????
+     fea:	40 00       	.word	0x0040	; ????
+     fec:	00 00       	nop
+     fee:	82 00       	.word	0x0082	; ????
+     ff0:	40 00       	.word	0x0040	; ????
+     ff2:	00 00       	nop
+     ff4:	c6 00       	.word	0x00c6	; ????
+     ff6:	41 00       	.word	0x0041	; ????
+     ff8:	00 00       	nop
+     ffa:	7c 00       	.word	0x007c	; ????
+     ffc:	63 00       	.word	0x0063	; ????
+     ffe:	00 00       	nop
+    1000:	38 00       	.word	0x0038	; ????
+    1002:	3f 00       	.word	0x003f	; ????
+    1004:	00 00       	nop
+    1006:	00 00       	nop
+    1008:	1e 00       	.word	0x001e	; ????
+	...
+    102e:	00 00       	nop
+    1030:	0d 00       	.word	0x000d	; ????
+    1032:	00 00       	nop
+    1034:	00 00       	nop
+    1036:	00 00       	nop
+    1038:	e0 00       	.word	0x00e0	; ????
+    103a:	07 00       	.word	0x0007	; ????
+    103c:	00 00       	nop
+    103e:	f0 00       	.word	0x00f0	; ????
+    1040:	1f 00       	.word	0x001f	; ????
+    1042:	00 00       	nop
+    1044:	18 00       	.word	0x0018	; ????
+    1046:	38 00       	.word	0x0038	; ????
+    1048:	00 00       	nop
+    104a:	04 00       	.word	0x0004	; ????
+    104c:	20 00       	.word	0x0020	; ????
+    104e:	00 00       	nop
+    1050:	06 00       	.word	0x0006	; ????
+    1052:	60 00       	.word	0x0060	; ????
+    1054:	00 00       	nop
+    1056:	02 00       	.word	0x0002	; ????
+    1058:	40 00       	.word	0x0040	; ????
+    105a:	00 00       	nop
+    105c:	02 00       	.word	0x0002	; ????
+    105e:	40 00       	.word	0x0040	; ????
+    1060:	00 00       	nop
+    1062:	02 00       	.word	0x0002	; ????
+    1064:	40 00       	.word	0x0040	; ????
+    1066:	00 00       	nop
+    1068:	02 00       	.word	0x0002	; ????
+    106a:	40 00       	.word	0x0040	; ????
+    106c:	00 00       	nop
+    106e:	04 00       	.word	0x0004	; ????
+    1070:	20 00       	.word	0x0020	; ????
+    1072:	00 00       	nop
+    1074:	1c 00       	.word	0x001c	; ????
+    1076:	10 00       	.word	0x0010	; ????
+    1078:	00 00       	nop
+    107a:	3e 00       	.word	0x003e	; ????
+    107c:	08 00       	.word	0x0008	; ????
+	...
+    10a2:	00 00       	nop
+    10a4:	0e 00       	.word	0x000e	; ????
+    10a6:	02 00       	.word	0x0002	; ????
+    10a8:	40 00       	.word	0x0040	; ????
+    10aa:	00 00       	nop
+    10ac:	02 00       	.word	0x0002	; ????
+    10ae:	40 00       	.word	0x0040	; ????
+    10b0:	00 00       	nop
+    10b2:	fe 00       	.word	0x00fe	; ????
+    10b4:	7f 00       	.word	0x007f	; ????
+    10b6:	00 00       	nop
+    10b8:	fe 00       	.word	0x00fe	; ????
+    10ba:	7f 00       	.word	0x007f	; ????
+    10bc:	00 00       	nop
+    10be:	02 00       	.word	0x0002	; ????
+    10c0:	40 00       	.word	0x0040	; ????
+    10c2:	00 00       	nop
+    10c4:	02 00       	.word	0x0002	; ????
+    10c6:	40 00       	.word	0x0040	; ????
+    10c8:	00 00       	nop
+    10ca:	02 00       	.word	0x0002	; ????
+    10cc:	40 00       	.word	0x0040	; ????
+    10ce:	00 00       	nop
+    10d0:	02 00       	.word	0x0002	; ????
+    10d2:	40 00       	.word	0x0040	; ????
+    10d4:	00 00       	nop
+    10d6:	02 00       	.word	0x0002	; ????
+    10d8:	40 00       	.word	0x0040	; ????
+    10da:	00 00       	nop
+    10dc:	06 00       	.word	0x0006	; ????
+    10de:	60 00       	.word	0x0060	; ????
+    10e0:	00 00       	nop
+    10e2:	0c 00       	.word	0x000c	; ????
+    10e4:	30 00       	.word	0x0030	; ????
+    10e6:	00 00       	nop
+    10e8:	1c 00       	.word	0x001c	; ????
+    10ea:	18 00       	.word	0x0018	; ????
+    10ec:	00 00       	nop
+    10ee:	f8 00       	.word	0x00f8	; ????
+    10f0:	0f 00       	.word	0x000f	; ????
+    10f2:	00 00       	nop
+    10f4:	e0 00       	.word	0x00e0	; ????
+    10f6:	07 00       	.word	0x0007	; ????
+	...
+    1118:	0d 00       	.word	0x000d	; ????
+    111a:	02 00       	.word	0x0002	; ????
+    111c:	40 00       	.word	0x0040	; ????
+    111e:	00 00       	nop
+    1120:	02 00       	.word	0x0002	; ????
+    1122:	40 00       	.word	0x0040	; ????
+    1124:	00 00       	nop
+    1126:	fe 00       	.word	0x00fe	; ????
+    1128:	7f 00       	.word	0x007f	; ????
+    112a:	00 00       	nop
+    112c:	fe 00       	.word	0x00fe	; ????
+    112e:	7f 00       	.word	0x007f	; ????
+    1130:	00 00       	nop
+    1132:	82 00       	.word	0x0082	; ????
+    1134:	40 00       	.word	0x0040	; ????
+    1136:	00 00       	nop
+    1138:	82 00       	.word	0x0082	; ????
+    113a:	40 00       	.word	0x0040	; ????
+    113c:	00 00       	nop
+    113e:	82 00       	.word	0x0082	; ????
+    1140:	40 00       	.word	0x0040	; ????
+    1142:	00 00       	nop
+    1144:	82 00       	.word	0x0082	; ????
+    1146:	40 00       	.word	0x0040	; ????
+    1148:	00 00       	nop
+    114a:	82 00       	.word	0x0082	; ????
+    114c:	40 00       	.word	0x0040	; ????
+    114e:	00 00       	nop
+    1150:	e2 00       	.word	0x00e2	; ????
+    1152:	43 00       	.word	0x0043	; ????
+    1154:	00 00       	nop
+    1156:	06 00       	.word	0x0006	; ????
+    1158:	60 00       	.word	0x0060	; ????
+    115a:	00 00       	nop
+    115c:	0e 00       	.word	0x000e	; ????
+    115e:	70 00       	.word	0x0070	; ????
+    1160:	00 00       	nop
+    1162:	00 00       	nop
+    1164:	08 00       	.word	0x0008	; ????
+	...
+    118a:	00 00       	nop
+    118c:	0b 00       	.word	0x000b	; ????
+    118e:	02 00       	.word	0x0002	; ????
+    1190:	40 00       	.word	0x0040	; ????
+    1192:	00 00       	nop
+    1194:	02 00       	.word	0x0002	; ????
+    1196:	40 00       	.word	0x0040	; ????
+    1198:	00 00       	nop
+    119a:	fe 00       	.word	0x00fe	; ????
+    119c:	7f 00       	.word	0x007f	; ????
+    119e:	00 00       	nop
+    11a0:	fe 00       	.word	0x00fe	; ????
+    11a2:	7f 00       	.word	0x007f	; ????
+    11a4:	00 00       	nop
+    11a6:	82 00       	.word	0x0082	; ????
+    11a8:	40 00       	.word	0x0040	; ????
+    11aa:	00 00       	nop
+    11ac:	82 00       	.word	0x0082	; ????
+    11ae:	40 00       	.word	0x0040	; ????
+    11b0:	00 00       	nop
+    11b2:	82 00       	.word	0x0082	; ????
+    11b4:	00 00       	nop
+    11b6:	00 00       	nop
+    11b8:	82 00       	.word	0x0082	; ????
+    11ba:	00 00       	nop
+    11bc:	00 00       	nop
+    11be:	e2 00       	.word	0x00e2	; ????
+    11c0:	03 00       	.word	0x0003	; ????
+    11c2:	00 00       	nop
+    11c4:	06 00       	.word	0x0006	; ????
+    11c6:	00 00       	nop
+    11c8:	00 00       	nop
+    11ca:	0e 00       	.word	0x000e	; ????
+	...
+    1200:	0f 00       	.word	0x000f	; ????
+    1202:	00 00       	nop
+    1204:	00 00       	nop
+    1206:	00 00       	nop
+    1208:	c0 00       	.word	0x00c0	; ????
+    120a:	07 00       	.word	0x0007	; ????
+    120c:	00 00       	nop
+    120e:	f0 00       	.word	0x00f0	; ????
+    1210:	1f 00       	.word	0x001f	; ????
+    1212:	00 00       	nop
+    1214:	18 00       	.word	0x0018	; ????
+    1216:	38 00       	.word	0x0038	; ????
+    1218:	00 00       	nop
+    121a:	04 00       	.word	0x0004	; ????
+    121c:	30 00       	.word	0x0030	; ????
+    121e:	00 00       	nop
+    1220:	06 00       	.word	0x0006	; ????
+    1222:	60 00       	.word	0x0060	; ????
+    1224:	00 00       	nop
+    1226:	02 00       	.word	0x0002	; ????
+    1228:	40 00       	.word	0x0040	; ????
+    122a:	00 00       	nop
+    122c:	02 00       	.word	0x0002	; ????
+    122e:	40 00       	.word	0x0040	; ????
+    1230:	00 00       	nop
+    1232:	02 00       	.word	0x0002	; ????
+    1234:	40 00       	.word	0x0040	; ????
+    1236:	00 00       	nop
+    1238:	82 00       	.word	0x0082	; ????
+    123a:	40 00       	.word	0x0040	; ????
+    123c:	00 00       	nop
+    123e:	84 00       	.word	0x0084	; ????
+    1240:	60 00       	.word	0x0060	; ????
+    1242:	00 00       	nop
+    1244:	8c 00       	.word	0x008c	; ????
+    1246:	3f 00       	.word	0x003f	; ????
+    1248:	00 00       	nop
+    124a:	9e 00       	.word	0x009e	; ????
+    124c:	3f 00       	.word	0x003f	; ????
+    124e:	00 00       	nop
+    1250:	80 00       	.word	0x0080	; ????
+    1252:	00 00       	nop
+    1254:	00 00       	nop
+    1256:	80 00       	.word	0x0080	; ????
+	...
+    1274:	0f 00       	.word	0x000f	; ????
+    1276:	02 00       	.word	0x0002	; ????
+    1278:	40 00       	.word	0x0040	; ????
+    127a:	00 00       	nop
+    127c:	02 00       	.word	0x0002	; ????
+    127e:	40 00       	.word	0x0040	; ????
+    1280:	00 00       	nop
+    1282:	fe 00       	.word	0x00fe	; ????
+    1284:	7f 00       	.word	0x007f	; ????
+    1286:	00 00       	nop
+    1288:	fe 00       	.word	0x00fe	; ????
+    128a:	7f 00       	.word	0x007f	; ????
+    128c:	00 00       	nop
+    128e:	82 00       	.word	0x0082	; ????
+    1290:	40 00       	.word	0x0040	; ????
+    1292:	00 00       	nop
+    1294:	82 00       	.word	0x0082	; ????
+    1296:	40 00       	.word	0x0040	; ????
+    1298:	00 00       	nop
+    129a:	80 00       	.word	0x0080	; ????
+    129c:	00 00       	nop
+    129e:	00 00       	nop
+    12a0:	80 00       	.word	0x0080	; ????
+    12a2:	00 00       	nop
+    12a4:	00 00       	nop
+    12a6:	80 00       	.word	0x0080	; ????
+    12a8:	00 00       	nop
+    12aa:	00 00       	nop
+    12ac:	82 00       	.word	0x0082	; ????
+    12ae:	40 00       	.word	0x0040	; ????
+    12b0:	00 00       	nop
+    12b2:	82 00       	.word	0x0082	; ????
+    12b4:	40 00       	.word	0x0040	; ????
+    12b6:	00 00       	nop
+    12b8:	fe 00       	.word	0x00fe	; ????
+    12ba:	7f 00       	.word	0x007f	; ????
+    12bc:	00 00       	nop
+    12be:	fe 00       	.word	0x00fe	; ????
+    12c0:	7f 00       	.word	0x007f	; ????
+    12c2:	00 00       	nop
+    12c4:	02 00       	.word	0x0002	; ????
+    12c6:	40 00       	.word	0x0040	; ????
+    12c8:	00 00       	nop
+    12ca:	02 00       	.word	0x0002	; ????
+    12cc:	40 00       	.word	0x0040	; ????
+	...
+    12e6:	00 00       	nop
+    12e8:	06 00       	.word	0x0006	; ????
+    12ea:	02 00       	.word	0x0002	; ????
+    12ec:	40 00       	.word	0x0040	; ????
+    12ee:	00 00       	nop
+    12f0:	02 00       	.word	0x0002	; ????
+    12f2:	40 00       	.word	0x0040	; ????
+    12f4:	00 00       	nop
+    12f6:	fe 00       	.word	0x00fe	; ????
+    12f8:	7f 00       	.word	0x007f	; ????
+    12fa:	00 00       	nop
+    12fc:	fe 00       	.word	0x00fe	; ????
+    12fe:	7f 00       	.word	0x007f	; ????
+    1300:	00 00       	nop
+    1302:	02 00       	.word	0x0002	; ????
+    1304:	40 00       	.word	0x0040	; ????
+    1306:	00 00       	nop
+    1308:	02 00       	.word	0x0002	; ????
+    130a:	40 00       	.word	0x0040	; ????
+	...
+    135c:	08 00       	.word	0x0008	; ????
+    135e:	00 00       	nop
+    1360:	30 00       	.word	0x0030	; ????
+    1362:	00 00       	nop
+    1364:	00 00       	nop
+    1366:	70 00       	.word	0x0070	; ????
+    1368:	00 00       	nop
+    136a:	02 00       	.word	0x0002	; ????
+    136c:	60 00       	.word	0x0060	; ????
+    136e:	00 00       	nop
+    1370:	02 00       	.word	0x0002	; ????
+    1372:	40 00       	.word	0x0040	; ????
+    1374:	00 00       	nop
+    1376:	fe 00       	.word	0x00fe	; ????
+    1378:	3f 00       	.word	0x003f	; ????
+    137a:	00 00       	nop
+    137c:	fe 00       	.word	0x00fe	; ????
+    137e:	1f 00       	.word	0x001f	; ????
+    1380:	00 00       	nop
+    1382:	02 00       	.word	0x0002	; ????
+    1384:	00 00       	nop
+    1386:	00 00       	nop
+    1388:	02 00       	.word	0x0002	; ????
+	...
+    13ce:	00 00       	nop
+    13d0:	0f 00       	.word	0x000f	; ????
+    13d2:	02 00       	.word	0x0002	; ????
+    13d4:	40 00       	.word	0x0040	; ????
+    13d6:	00 00       	nop
+    13d8:	02 00       	.word	0x0002	; ????
+    13da:	40 00       	.word	0x0040	; ????
+    13dc:	00 00       	nop
+    13de:	fe 00       	.word	0x00fe	; ????
+    13e0:	7f 00       	.word	0x007f	; ????
+    13e2:	00 00       	nop
+    13e4:	fe 00       	.word	0x00fe	; ????
+    13e6:	7f 00       	.word	0x007f	; ????
+    13e8:	00 00       	nop
+    13ea:	82 00       	.word	0x0082	; ????
+    13ec:	40 00       	.word	0x0040	; ????
+    13ee:	00 00       	nop
+    13f0:	82 00       	.word	0x0082	; ????
+    13f2:	41 00       	.word	0x0041	; ????
+    13f4:	00 00       	nop
+    13f6:	c0 00       	.word	0x00c0	; ????
+    13f8:	03 00       	.word	0x0003	; ????
+    13fa:	00 00       	nop
+    13fc:	20 00       	.word	0x0020	; ????
+    13fe:	07 00       	.word	0x0007	; ????
+    1400:	00 00       	nop
+    1402:	10 00       	.word	0x0010	; ????
+    1404:	0e 00       	.word	0x000e	; ????
+    1406:	00 00       	nop
+    1408:	0a 00       	.word	0x000a	; ????
+    140a:	5c 00       	.word	0x005c	; ????
+    140c:	00 00       	nop
+    140e:	06 00       	.word	0x0006	; ????
+    1410:	78 00       	.word	0x0078	; ????
+    1412:	00 00       	nop
+    1414:	06 00       	.word	0x0006	; ????
+    1416:	70 00       	.word	0x0070	; ????
+    1418:	00 00       	nop
+    141a:	02 00       	.word	0x0002	; ????
+    141c:	60 00       	.word	0x0060	; ????
+    141e:	00 00       	nop
+    1420:	02 00       	.word	0x0002	; ????
+    1422:	40 00       	.word	0x0040	; ????
+    1424:	00 00       	nop
+    1426:	00 00       	nop
+    1428:	40 00       	.word	0x0040	; ????
+	...
+    1442:	00 00       	nop
+    1444:	0c 00       	.word	0x000c	; ????
+    1446:	02 00       	.word	0x0002	; ????
+    1448:	40 00       	.word	0x0040	; ????
+    144a:	00 00       	nop
+    144c:	02 00       	.word	0x0002	; ????
+    144e:	40 00       	.word	0x0040	; ????
+    1450:	00 00       	nop
+    1452:	fe 00       	.word	0x00fe	; ????
+    1454:	7f 00       	.word	0x007f	; ????
+    1456:	00 00       	nop
+    1458:	fe 00       	.word	0x00fe	; ????
+    145a:	7f 00       	.word	0x007f	; ????
+    145c:	00 00       	nop
+    145e:	02 00       	.word	0x0002	; ????
+    1460:	40 00       	.word	0x0040	; ????
+    1462:	00 00       	nop
+    1464:	02 00       	.word	0x0002	; ????
+    1466:	40 00       	.word	0x0040	; ????
+    1468:	00 00       	nop
+    146a:	00 00       	nop
+    146c:	40 00       	.word	0x0040	; ????
+    146e:	00 00       	nop
+    1470:	00 00       	nop
+    1472:	40 00       	.word	0x0040	; ????
+    1474:	00 00       	nop
+    1476:	00 00       	nop
+    1478:	40 00       	.word	0x0040	; ????
+    147a:	00 00       	nop
+    147c:	00 00       	nop
+    147e:	60 00       	.word	0x0060	; ????
+    1480:	00 00       	nop
+    1482:	00 00       	nop
+    1484:	70 00       	.word	0x0070	; ????
+    1486:	00 00       	nop
+    1488:	00 00       	nop
+    148a:	18 00       	.word	0x0018	; ????
+	...
+    14b8:	12 00       	.word	0x0012	; ????
+    14ba:	02 00       	.word	0x0002	; ????
+    14bc:	40 00       	.word	0x0040	; ????
+    14be:	00 00       	nop
+    14c0:	02 00       	.word	0x0002	; ????
+    14c2:	40 00       	.word	0x0040	; ????
+    14c4:	00 00       	nop
+    14c6:	fe 00       	.word	0x00fe	; ????
+    14c8:	7f 00       	.word	0x007f	; ????
+    14ca:	00 00       	nop
+    14cc:	0e 00       	.word	0x000e	; ????
+    14ce:	40 00       	.word	0x0040	; ????
+    14d0:	00 00       	nop
+    14d2:	7e 00       	.word	0x007e	; ????
+    14d4:	40 00       	.word	0x0040	; ????
+    14d6:	00 00       	nop
+    14d8:	f8 00       	.word	0x00f8	; ????
+    14da:	01 00       	.word	0x0001	; ????
+    14dc:	00 00       	nop
+    14de:	c0 00       	.word	0x00c0	; ????
+    14e0:	07 00       	.word	0x0007	; ????
+    14e2:	00 00       	nop
+    14e4:	00 00       	nop
+    14e6:	3f 00       	.word	0x003f	; ????
+    14e8:	00 00       	nop
+    14ea:	00 00       	nop
+    14ec:	78 00       	.word	0x0078	; ????
+    14ee:	00 00       	nop
+    14f0:	00 00       	nop
+    14f2:	18 00       	.word	0x0018	; ????
+    14f4:	00 00       	nop
+    14f6:	00 00       	nop
+    14f8:	06 00       	.word	0x0006	; ????
+    14fa:	00 00       	nop
+    14fc:	80 00       	.word	0x0080	; ????
+    14fe:	01 00       	.word	0x0001	; ????
+    1500:	00 00       	nop
+    1502:	70 00       	.word	0x0070	; ????
+    1504:	40 00       	.word	0x0040	; ????
+    1506:	00 00       	nop
+    1508:	0c 00       	.word	0x000c	; ????
+    150a:	40 00       	.word	0x0040	; ????
+    150c:	00 00       	nop
+    150e:	fe 00       	.word	0x00fe	; ????
+    1510:	7f 00       	.word	0x007f	; ????
+    1512:	00 00       	nop
+    1514:	fe 00       	.word	0x00fe	; ????
+    1516:	7f 00       	.word	0x007f	; ????
+    1518:	00 00       	nop
+    151a:	02 00       	.word	0x0002	; ????
+    151c:	40 00       	.word	0x0040	; ????
+    151e:	00 00       	nop
+    1520:	02 00       	.word	0x0002	; ????
+    1522:	40 00       	.word	0x0040	; ????
+	...
+    152c:	0f 00       	.word	0x000f	; ????
+    152e:	02 00       	.word	0x0002	; ????
+    1530:	40 00       	.word	0x0040	; ????
+    1532:	00 00       	nop
+    1534:	06 00       	.word	0x0006	; ????
+    1536:	40 00       	.word	0x0040	; ????
+    1538:	00 00       	nop
+    153a:	fe 00       	.word	0x00fe	; ????
+    153c:	7f 00       	.word	0x007f	; ????
+    153e:	00 00       	nop
+    1540:	1c 00       	.word	0x001c	; ????
+    1542:	40 00       	.word	0x0040	; ????
+    1544:	00 00       	nop
+    1546:	38 00       	.word	0x0038	; ????
+    1548:	40 00       	.word	0x0040	; ????
+    154a:	00 00       	nop
+    154c:	70 00       	.word	0x0070	; ????
+    154e:	00 00       	nop
+    1550:	00 00       	nop
+    1552:	e0 00       	.word	0x00e0	; ????
+    1554:	00 00       	nop
+    1556:	00 00       	nop
+    1558:	80 00       	.word	0x0080	; ????
+    155a:	01 00       	.word	0x0001	; ????
+    155c:	00 00       	nop
+    155e:	00 00       	nop
+    1560:	03 00       	.word	0x0003	; ????
+    1562:	00 00       	nop
+    1564:	00 00       	nop
+    1566:	0e 00       	.word	0x000e	; ????
+    1568:	00 00       	nop
+    156a:	02 00       	.word	0x0002	; ????
+    156c:	1c 00       	.word	0x001c	; ????
+    156e:	00 00       	nop
+    1570:	02 00       	.word	0x0002	; ????
+    1572:	38 00       	.word	0x0038	; ????
+    1574:	00 00       	nop
+    1576:	fe 00       	.word	0x00fe	; ????
+    1578:	7f 00       	.word	0x007f	; ????
+    157a:	00 00       	nop
+    157c:	02 00       	.word	0x0002	; ????
+    157e:	00 00       	nop
+    1580:	00 00       	nop
+    1582:	02 00       	.word	0x0002	; ????
+	...
+    15a0:	0e 00       	.word	0x000e	; ????
+    15a2:	00 00       	nop
+    15a4:	00 00       	nop
+    15a6:	00 00       	nop
+    15a8:	e0 00       	.word	0x00e0	; ????
+    15aa:	07 00       	.word	0x0007	; ????
+    15ac:	00 00       	nop
+    15ae:	f8 00       	.word	0x00f8	; ????
+    15b0:	1f 00       	.word	0x001f	; ????
+    15b2:	00 00       	nop
+    15b4:	1c 00       	.word	0x001c	; ????
+    15b6:	38 00       	.word	0x0038	; ????
+    15b8:	00 00       	nop
+    15ba:	04 00       	.word	0x0004	; ????
+    15bc:	20 00       	.word	0x0020	; ????
+    15be:	00 00       	nop
+    15c0:	02 00       	.word	0x0002	; ????
+    15c2:	40 00       	.word	0x0040	; ????
+    15c4:	00 00       	nop
+    15c6:	02 00       	.word	0x0002	; ????
+    15c8:	40 00       	.word	0x0040	; ????
+    15ca:	00 00       	nop
+    15cc:	02 00       	.word	0x0002	; ????
+    15ce:	40 00       	.word	0x0040	; ????
+    15d0:	00 00       	nop
+    15d2:	02 00       	.word	0x0002	; ????
+    15d4:	40 00       	.word	0x0040	; ????
+    15d6:	00 00       	nop
+    15d8:	02 00       	.word	0x0002	; ????
+    15da:	40 00       	.word	0x0040	; ????
+    15dc:	00 00       	nop
+    15de:	04 00       	.word	0x0004	; ????
+    15e0:	20 00       	.word	0x0020	; ????
+    15e2:	00 00       	nop
+    15e4:	1c 00       	.word	0x001c	; ????
+    15e6:	38 00       	.word	0x0038	; ????
+    15e8:	00 00       	nop
+    15ea:	f8 00       	.word	0x00f8	; ????
+    15ec:	1f 00       	.word	0x001f	; ????
+    15ee:	00 00       	nop
+    15f0:	e0 00       	.word	0x00e0	; ????
+    15f2:	07 00       	.word	0x0007	; ????
+	...
+    1614:	0b 00       	.word	0x000b	; ????
+    1616:	02 00       	.word	0x0002	; ????
+    1618:	40 00       	.word	0x0040	; ????
+    161a:	00 00       	nop
+    161c:	02 00       	.word	0x0002	; ????
+    161e:	40 00       	.word	0x0040	; ????
+    1620:	00 00       	nop
+    1622:	fe 00       	.word	0x00fe	; ????
+    1624:	7f 00       	.word	0x007f	; ????
+    1626:	00 00       	nop
+    1628:	fe 00       	.word	0x00fe	; ????
+    162a:	7f 00       	.word	0x007f	; ????
+    162c:	00 00       	nop
+    162e:	02 00       	.word	0x0002	; ????
+    1630:	41 00       	.word	0x0041	; ????
+    1632:	00 00       	nop
+    1634:	02 00       	.word	0x0002	; ????
+    1636:	41 00       	.word	0x0041	; ????
+    1638:	00 00       	nop
+    163a:	02 00       	.word	0x0002	; ????
+    163c:	01 00       	.word	0x0001	; ????
+    163e:	00 00       	nop
+    1640:	02 00       	.word	0x0002	; ????
+    1642:	01 00       	.word	0x0001	; ????
+    1644:	00 00       	nop
+    1646:	86 00       	.word	0x0086	; ????
+    1648:	01 00       	.word	0x0001	; ????
+    164a:	00 00       	nop
+    164c:	fc 00       	.word	0x00fc	; ????
+    164e:	00 00       	nop
+    1650:	00 00       	nop
+    1652:	78 00       	.word	0x0078	; ????
+	...
+    1688:	0e 00       	.word	0x000e	; ????
+    168a:	00 00       	nop
+    168c:	00 00       	nop
+    168e:	00 00       	nop
+    1690:	e0 00       	.word	0x00e0	; ????
+    1692:	07 00       	.word	0x0007	; ????
+    1694:	00 00       	nop
+    1696:	f8 00       	.word	0x00f8	; ????
+    1698:	1f 00       	.word	0x001f	; ????
+    169a:	00 00       	nop
+    169c:	1c 00       	.word	0x001c	; ????
+    169e:	38 00       	.word	0x0038	; ????
+    16a0:	00 00       	nop
+    16a2:	04 00       	.word	0x0004	; ????
+    16a4:	20 00       	.word	0x0020	; ????
+    16a6:	00 00       	nop
+    16a8:	02 00       	.word	0x0002	; ????
+    16aa:	40 00       	.word	0x0040	; ????
+    16ac:	00 00       	nop
+    16ae:	02 00       	.word	0x0002	; ????
+    16b0:	c0 00       	.word	0x00c0	; ????
+    16b2:	00 00       	nop
+    16b4:	02 00       	.word	0x0002	; ????
+    16b6:	c0 00       	.word	0x00c0	; ????
+    16b8:	00 00       	nop
+    16ba:	02 00       	.word	0x0002	; ????
+    16bc:	c0 00       	.word	0x00c0	; ????
+    16be:	01 00       	.word	0x0001	; ????
+    16c0:	02 00       	.word	0x0002	; ????
+    16c2:	40 00       	.word	0x0040	; ????
+    16c4:	03 00       	.word	0x0003	; ????
+    16c6:	04 00       	.word	0x0004	; ????
+    16c8:	20 00       	.word	0x0020	; ????
+    16ca:	02 00       	.word	0x0002	; ????
+    16cc:	1c 00       	.word	0x001c	; ????
+    16ce:	38 00       	.word	0x0038	; ????
+    16d0:	06 00       	.word	0x0006	; ????
+    16d2:	f8 00       	.word	0x00f8	; ????
+    16d4:	1f 00       	.word	0x001f	; ????
+    16d6:	04 00       	.word	0x0004	; ????
+    16d8:	e0 00       	.word	0x00e0	; ????
+    16da:	07 00       	.word	0x0007	; ????
+    16dc:	04 00       	.word	0x0004	; ????
+	...
+    16fa:	00 00       	nop
+    16fc:	0e 00       	.word	0x000e	; ????
+    16fe:	02 00       	.word	0x0002	; ????
+    1700:	40 00       	.word	0x0040	; ????
+    1702:	00 00       	nop
+    1704:	02 00       	.word	0x0002	; ????
+    1706:	40 00       	.word	0x0040	; ????
+    1708:	00 00       	nop
+    170a:	fe 00       	.word	0x00fe	; ????
+    170c:	7f 00       	.word	0x007f	; ????
+    170e:	00 00       	nop
+    1710:	fe 00       	.word	0x00fe	; ????
+    1712:	7f 00       	.word	0x007f	; ????
+    1714:	00 00       	nop
+    1716:	82 00       	.word	0x0082	; ????
+    1718:	40 00       	.word	0x0040	; ????
+    171a:	00 00       	nop
+    171c:	82 00       	.word	0x0082	; ????
+    171e:	40 00       	.word	0x0040	; ????
+    1720:	00 00       	nop
+    1722:	82 00       	.word	0x0082	; ????
+    1724:	03 00       	.word	0x0003	; ????
+    1726:	00 00       	nop
+    1728:	82 00       	.word	0x0082	; ????
+    172a:	07 00       	.word	0x0007	; ????
+    172c:	00 00       	nop
+    172e:	c6 00       	.word	0x00c6	; ????
+    1730:	1e 00       	.word	0x001e	; ????
+    1732:	00 00       	nop
+    1734:	7c 00       	.word	0x007c	; ????
+    1736:	38 00       	.word	0x0038	; ????
+    1738:	00 00       	nop
+    173a:	38 00       	.word	0x0038	; ????
+    173c:	70 00       	.word	0x0070	; ????
+    173e:	00 00       	nop
+    1740:	00 00       	nop
+    1742:	60 00       	.word	0x0060	; ????
+    1744:	00 00       	nop
+    1746:	00 00       	nop
+    1748:	40 00       	.word	0x0040	; ????
+    174a:	00 00       	nop
+    174c:	00 00       	nop
+    174e:	40 00       	.word	0x0040	; ????
+	...
+    1770:	0a 00       	.word	0x000a	; ????
+    1772:	00 00       	nop
+    1774:	00 00       	nop
+    1776:	00 00       	nop
+    1778:	38 00       	.word	0x0038	; ????
+    177a:	7c 00       	.word	0x007c	; ????
+    177c:	00 00       	nop
+    177e:	7c 00       	.word	0x007c	; ????
+    1780:	30 00       	.word	0x0030	; ????
+    1782:	00 00       	nop
+    1784:	e6 00       	.word	0x00e6	; ????
+    1786:	20 00       	.word	0x0020	; ????
+    1788:	00 00       	nop
+    178a:	c2 00       	.word	0x00c2	; ????
+    178c:	40 00       	.word	0x0040	; ????
+    178e:	00 00       	nop
+    1790:	82 00       	.word	0x0082	; ????
+    1792:	41 00       	.word	0x0041	; ????
+    1794:	00 00       	nop
+    1796:	84 00       	.word	0x0084	; ????
+    1798:	43 00       	.word	0x0043	; ????
+    179a:	00 00       	nop
+    179c:	0c 00       	.word	0x000c	; ????
+    179e:	67 00       	.word	0x0067	; ????
+    17a0:	00 00       	nop
+    17a2:	3e 00       	.word	0x003e	; ????
+    17a4:	3e 00       	.word	0x003e	; ????
+    17a6:	00 00       	nop
+    17a8:	00 00       	nop
+    17aa:	1c 00       	.word	0x001c	; ????
+	...
+    17e4:	0c 00       	.word	0x000c	; ????
+    17e6:	0e 00       	.word	0x000e	; ????
+    17e8:	00 00       	nop
+    17ea:	00 00       	nop
+    17ec:	06 00       	.word	0x0006	; ????
+    17ee:	00 00       	nop
+    17f0:	00 00       	nop
+    17f2:	02 00       	.word	0x0002	; ????
+    17f4:	00 00       	nop
+    17f6:	00 00       	nop
+    17f8:	02 00       	.word	0x0002	; ????
+    17fa:	40 00       	.word	0x0040	; ????
+    17fc:	00 00       	nop
+    17fe:	02 00       	.word	0x0002	; ????
+    1800:	40 00       	.word	0x0040	; ????
+    1802:	00 00       	nop
+    1804:	fe 00       	.word	0x00fe	; ????
+    1806:	7f 00       	.word	0x007f	; ????
+    1808:	00 00       	nop
+    180a:	fe 00       	.word	0x00fe	; ????
+    180c:	7f 00       	.word	0x007f	; ????
+    180e:	00 00       	nop
+    1810:	02 00       	.word	0x0002	; ????
+    1812:	40 00       	.word	0x0040	; ????
+    1814:	00 00       	nop
+    1816:	02 00       	.word	0x0002	; ????
+    1818:	40 00       	.word	0x0040	; ????
+    181a:	00 00       	nop
+    181c:	02 00       	.word	0x0002	; ????
+    181e:	00 00       	nop
+    1820:	00 00       	nop
+    1822:	06 00       	.word	0x0006	; ????
+    1824:	00 00       	nop
+    1826:	00 00       	nop
+    1828:	0e 00       	.word	0x000e	; ????
+	...
+    1856:	00 00       	nop
+    1858:	0f 00       	.word	0x000f	; ????
+    185a:	02 00       	.word	0x0002	; ????
+    185c:	00 00       	nop
+    185e:	00 00       	nop
+    1860:	02 00       	.word	0x0002	; ????
+    1862:	00 00       	nop
+    1864:	00 00       	nop
+    1866:	fe 00       	.word	0x00fe	; ????
+    1868:	0f 00       	.word	0x000f	; ????
+    186a:	00 00       	nop
+    186c:	fe 00       	.word	0x00fe	; ????
+    186e:	3f 00       	.word	0x003f	; ????
+    1870:	00 00       	nop
+    1872:	02 00       	.word	0x0002	; ????
+    1874:	30 00       	.word	0x0030	; ????
+    1876:	00 00       	nop
+    1878:	02 00       	.word	0x0002	; ????
+    187a:	60 00       	.word	0x0060	; ????
+    187c:	00 00       	nop
+    187e:	00 00       	nop
+    1880:	40 00       	.word	0x0040	; ????
+    1882:	00 00       	nop
+    1884:	00 00       	nop
+    1886:	40 00       	.word	0x0040	; ????
+    1888:	00 00       	nop
+    188a:	00 00       	nop
+    188c:	40 00       	.word	0x0040	; ????
+    188e:	00 00       	nop
+    1890:	00 00       	nop
+    1892:	40 00       	.word	0x0040	; ????
+    1894:	00 00       	nop
+    1896:	02 00       	.word	0x0002	; ????
+    1898:	20 00       	.word	0x0020	; ????
+    189a:	00 00       	nop
+    189c:	02 00       	.word	0x0002	; ????
+    189e:	30 00       	.word	0x0030	; ????
+    18a0:	00 00       	nop
+    18a2:	fe 00       	.word	0x00fe	; ????
+    18a4:	0f 00       	.word	0x000f	; ????
+    18a6:	00 00       	nop
+    18a8:	02 00       	.word	0x0002	; ????
+    18aa:	00 00       	nop
+    18ac:	00 00       	nop
+    18ae:	02 00       	.word	0x0002	; ????
+	...
+    18cc:	0f 00       	.word	0x000f	; ????
+    18ce:	02 00       	.word	0x0002	; ????
+    18d0:	00 00       	nop
+    18d2:	00 00       	nop
+    18d4:	02 00       	.word	0x0002	; ????
+    18d6:	00 00       	nop
+    18d8:	00 00       	nop
+    18da:	06 00       	.word	0x0006	; ????
+    18dc:	00 00       	nop
+    18de:	00 00       	nop
+    18e0:	1e 00       	.word	0x001e	; ????
+    18e2:	00 00       	nop
+    18e4:	00 00       	nop
+    18e6:	fe 00       	.word	0x00fe	; ????
+    18e8:	00 00       	nop
+    18ea:	00 00       	nop
+    18ec:	c2 00       	.word	0x00c2	; ????
+    18ee:	03 00       	.word	0x0003	; ????
+    18f0:	00 00       	nop
+    18f2:	00 00       	nop
+    18f4:	1f 00       	.word	0x001f	; ????
+    18f6:	00 00       	nop
+    18f8:	00 00       	nop
+    18fa:	7c 00       	.word	0x007c	; ????
+    18fc:	00 00       	nop
+    18fe:	00 00       	nop
+    1900:	60 00       	.word	0x0060	; ????
+    1902:	00 00       	nop
+    1904:	00 00       	nop
+    1906:	1c 00       	.word	0x001c	; ????
+    1908:	00 00       	nop
+    190a:	00 00       	nop
+    190c:	03 00       	.word	0x0003	; ????
+    190e:	00 00       	nop
+    1910:	e2 00       	.word	0x00e2	; ????
+    1912:	00 00       	nop
+    1914:	00 00       	nop
+    1916:	1e 00       	.word	0x001e	; ????
+    1918:	00 00       	nop
+    191a:	00 00       	nop
+    191c:	06 00       	.word	0x0006	; ????
+    191e:	00 00       	nop
+    1920:	00 00       	nop
+    1922:	02 00       	.word	0x0002	; ????
+	...
+    1940:	13 00       	.word	0x0013	; ????
+    1942:	02 00       	.word	0x0002	; ????
+    1944:	00 00       	nop
+    1946:	00 00       	nop
+    1948:	06 00       	.word	0x0006	; ????
+    194a:	00 00       	nop
+    194c:	00 00       	nop
+    194e:	3e 00       	.word	0x003e	; ????
+    1950:	00 00       	nop
+    1952:	00 00       	nop
+    1954:	fe 00       	.word	0x00fe	; ????
+    1956:	01 00       	.word	0x0001	; ????
+    1958:	00 00       	nop
+    195a:	c2 00       	.word	0x00c2	; ????
+    195c:	0f 00       	.word	0x000f	; ????
+    195e:	00 00       	nop
+    1960:	00 00       	nop
+    1962:	7e 00       	.word	0x007e	; ????
+    1964:	00 00       	nop
+    1966:	00 00       	nop
+    1968:	38 00       	.word	0x0038	; ????
+    196a:	00 00       	nop
+    196c:	02 00       	.word	0x0002	; ????
+    196e:	07 00       	.word	0x0007	; ????
+    1970:	00 00       	nop
+    1972:	e6 00       	.word	0x00e6	; ????
+    1974:	00 00       	nop
+    1976:	00 00       	nop
+    1978:	1e 00       	.word	0x001e	; ????
+    197a:	00 00       	nop
+    197c:	00 00       	nop
+    197e:	fe 00       	.word	0x00fe	; ????
+    1980:	00 00       	nop
+    1982:	00 00       	nop
+    1984:	e2 00       	.word	0x00e2	; ????
+    1986:	07 00       	.word	0x0007	; ????
+    1988:	00 00       	nop
+    198a:	00 00       	nop
+    198c:	1f 00       	.word	0x001f	; ????
+    198e:	00 00       	nop
+    1990:	00 00       	nop
+    1992:	78 00       	.word	0x0078	; ????
+    1994:	00 00       	nop
+    1996:	00 00       	nop
+    1998:	1e 00       	.word	0x001e	; ????
+    199a:	00 00       	nop
+    199c:	c2 00       	.word	0x00c2	; ????
+    199e:	03 00       	.word	0x0003	; ????
+    19a0:	00 00       	nop
+    19a2:	3e 00       	.word	0x003e	; ????
+    19a4:	00 00       	nop
+    19a6:	00 00       	nop
+    19a8:	06 00       	.word	0x0006	; ????
+    19aa:	00 00       	nop
+    19ac:	00 00       	nop
+    19ae:	02 00       	.word	0x0002	; ????
+    19b0:	00 00       	nop
+    19b2:	00 00       	nop
+    19b4:	0e 00       	.word	0x000e	; ????
+    19b6:	02 00       	.word	0x0002	; ????
+    19b8:	40 00       	.word	0x0040	; ????
+    19ba:	00 00       	nop
+    19bc:	02 00       	.word	0x0002	; ????
+    19be:	40 00       	.word	0x0040	; ????
+    19c0:	00 00       	nop
+    19c2:	06 00       	.word	0x0006	; ????
+    19c4:	60 00       	.word	0x0060	; ????
+    19c6:	00 00       	nop
+    19c8:	0e 00       	.word	0x000e	; ????
+    19ca:	60 00       	.word	0x0060	; ????
+    19cc:	00 00       	nop
+    19ce:	1e 00       	.word	0x001e	; ????
+    19d0:	58 00       	.word	0x0058	; ????
+    19d2:	00 00       	nop
+    19d4:	72 00       	.word	0x0072	; ????
+    19d6:	0c 00       	.word	0x000c	; ????
+    19d8:	00 00       	nop
+    19da:	e2 00       	.word	0x00e2	; ????
+    19dc:	02 00       	.word	0x0002	; ????
+    19de:	00 00       	nop
+    19e0:	c0 00       	.word	0x00c0	; ????
+    19e2:	03 00       	.word	0x0003	; ????
+    19e4:	00 00       	nop
+    19e6:	40 00       	.word	0x0040	; ????
+    19e8:	07 00       	.word	0x0007	; ????
+    19ea:	00 00       	nop
+    19ec:	22 00       	.word	0x0022	; ????
+    19ee:	4e 00       	.word	0x004e	; ????
+    19f0:	00 00       	nop
+    19f2:	1a 00       	.word	0x001a	; ????
+    19f4:	78 00       	.word	0x0078	; ????
+    19f6:	00 00       	nop
+    19f8:	0e 00       	.word	0x000e	; ????
+    19fa:	70 00       	.word	0x0070	; ????
+    19fc:	00 00       	nop
+    19fe:	06 00       	.word	0x0006	; ????
+    1a00:	60 00       	.word	0x0060	; ????
+    1a02:	00 00       	nop
+    1a04:	02 00       	.word	0x0002	; ????
+    1a06:	40 00       	.word	0x0040	; ????
+	...
+    1a28:	0f 00       	.word	0x000f	; ????
+    1a2a:	02 00       	.word	0x0002	; ????
+    1a2c:	00 00       	nop
+    1a2e:	00 00       	nop
+    1a30:	02 00       	.word	0x0002	; ????
+    1a32:	00 00       	nop
+    1a34:	00 00       	nop
+    1a36:	06 00       	.word	0x0006	; ????
+    1a38:	00 00       	nop
+    1a3a:	00 00       	nop
+    1a3c:	0e 00       	.word	0x000e	; ????
+    1a3e:	00 00       	nop
+    1a40:	00 00       	nop
+    1a42:	1e 00       	.word	0x001e	; ????
+    1a44:	00 00       	nop
+    1a46:	00 00       	nop
+    1a48:	72 00       	.word	0x0072	; ????
+    1a4a:	40 00       	.word	0x0040	; ????
+    1a4c:	00 00       	nop
+    1a4e:	e2 00       	.word	0x00e2	; ????
+    1a50:	40 00       	.word	0x0040	; ????
+    1a52:	00 00       	nop
+    1a54:	80 00       	.word	0x0080	; ????
+    1a56:	7f 00       	.word	0x007f	; ????
+    1a58:	00 00       	nop
+    1a5a:	00 00       	nop
+    1a5c:	7f 00       	.word	0x007f	; ????
+    1a5e:	00 00       	nop
+    1a60:	c0 00       	.word	0x00c0	; ????
+    1a62:	40 00       	.word	0x0040	; ????
+    1a64:	00 00       	nop
+    1a66:	22 00       	.word	0x0022	; ????
+    1a68:	40 00       	.word	0x0040	; ????
+    1a6a:	00 00       	nop
+    1a6c:	1a 00       	.word	0x001a	; ????
+    1a6e:	00 00       	nop
+    1a70:	00 00       	nop
+    1a72:	06 00       	.word	0x0006	; ????
+    1a74:	00 00       	nop
+    1a76:	00 00       	nop
+    1a78:	02 00       	.word	0x0002	; ????
+    1a7a:	00 00       	nop
+    1a7c:	00 00       	nop
+    1a7e:	02 00       	.word	0x0002	; ????
+	...
+    1a9c:	0c 00       	.word	0x000c	; ????
+    1a9e:	00 00       	nop
+    1aa0:	40 00       	.word	0x0040	; ????
+    1aa2:	00 00       	nop
+    1aa4:	1e 00       	.word	0x001e	; ????
+    1aa6:	70 00       	.word	0x0070	; ????
+    1aa8:	00 00       	nop
+    1aaa:	06 00       	.word	0x0006	; ????
+    1aac:	78 00       	.word	0x0078	; ????
+    1aae:	00 00       	nop
+    1ab0:	02 00       	.word	0x0002	; ????
+    1ab2:	4c 00       	.word	0x004c	; ????
+    1ab4:	00 00       	nop
+    1ab6:	02 00       	.word	0x0002	; ????
+    1ab8:	47 00       	.word	0x0047	; ????
+    1aba:	00 00       	nop
+    1abc:	82 00       	.word	0x0082	; ????
+    1abe:	43 00       	.word	0x0043	; ????
+    1ac0:	00 00       	nop
+    1ac2:	e2 00       	.word	0x00e2	; ????
+    1ac4:	40 00       	.word	0x0040	; ????
+    1ac6:	00 00       	nop
+    1ac8:	72 00       	.word	0x0072	; ????
+    1aca:	40 00       	.word	0x0040	; ????
+    1acc:	00 00       	nop
+    1ace:	1e 00       	.word	0x001e	; ????
+    1ad0:	40 00       	.word	0x0040	; ????
+    1ad2:	00 00       	nop
+    1ad4:	0e 00       	.word	0x000e	; ????
+    1ad6:	40 00       	.word	0x0040	; ????
+    1ad8:	00 00       	nop
+    1ada:	02 00       	.word	0x0002	; ????
+    1adc:	60 00       	.word	0x0060	; ????
+    1ade:	00 00       	nop
+    1ae0:	00 00       	nop
+    1ae2:	38 00       	.word	0x0038	; ????
+	...
+    1b10:	06 00       	.word	0x0006	; ????
+    1b12:	00 00       	nop
+    1b14:	00 00       	nop
+    1b16:	00 00       	nop
+    1b18:	ff 00       	.word	0x00ff	; ????
+    1b1a:	ff 00       	.word	0x00ff	; ????
+    1b1c:	07 00       	.word	0x0007	; ????
+    1b1e:	ff 00       	.word	0x00ff	; ????
+    1b20:	ff 00       	.word	0x00ff	; ????
+    1b22:	07 00       	.word	0x0007	; ????
+    1b24:	01 00       	.word	0x0001	; ????
+    1b26:	00 00       	nop
+    1b28:	04 00       	.word	0x0004	; ????
+    1b2a:	01 00       	.word	0x0001	; ????
+    1b2c:	00 00       	nop
+    1b2e:	04 00       	.word	0x0004	; ????
+    1b30:	01 00       	.word	0x0001	; ????
+    1b32:	00 00       	nop
+    1b34:	04 00       	.word	0x0004	; ????
+	...
+    1b82:	00 00       	nop
+    1b84:	06 00       	.word	0x0006	; ????
+    1b86:	03 00       	.word	0x0003	; ????
+    1b88:	00 00       	nop
+    1b8a:	00 00       	nop
+    1b8c:	1c 00       	.word	0x001c	; ????
+    1b8e:	00 00       	nop
+    1b90:	00 00       	nop
+    1b92:	e0 00       	.word	0x00e0	; ????
+    1b94:	00 00       	nop
+    1b96:	00 00       	nop
+    1b98:	00 00       	nop
+    1b9a:	07 00       	.word	0x0007	; ????
+    1b9c:	00 00       	nop
+    1b9e:	00 00       	nop
+    1ba0:	38 00       	.word	0x0038	; ????
+    1ba2:	00 00       	nop
+    1ba4:	00 00       	nop
+    1ba6:	40 00       	.word	0x0040	; ????
+	...
+    1bf8:	05 00       	.word	0x0005	; ????
+    1bfa:	01 00       	.word	0x0001	; ????
+    1bfc:	00 00       	nop
+    1bfe:	04 00       	.word	0x0004	; ????
+    1c00:	01 00       	.word	0x0001	; ????
+    1c02:	00 00       	nop
+    1c04:	04 00       	.word	0x0004	; ????
+    1c06:	01 00       	.word	0x0001	; ????
+    1c08:	00 00       	nop
+    1c0a:	04 00       	.word	0x0004	; ????
+    1c0c:	ff 00       	.word	0x00ff	; ????
+    1c0e:	ff 00       	.word	0x00ff	; ????
+    1c10:	07 00       	.word	0x0007	; ????
+    1c12:	ff 00       	.word	0x00ff	; ????
+    1c14:	ff 00       	.word	0x00ff	; ????
+    1c16:	07 00       	.word	0x0007	; ????
+	...
+    1c6c:	0a 00       	.word	0x000a	; ????
+    1c6e:	80 00       	.word	0x0080	; ????
+    1c70:	00 00       	nop
+    1c72:	00 00       	nop
+    1c74:	60 00       	.word	0x0060	; ????
+    1c76:	00 00       	nop
+    1c78:	00 00       	nop
+    1c7a:	10 00       	.word	0x0010	; ????
+    1c7c:	00 00       	nop
+    1c7e:	00 00       	nop
+    1c80:	0c 00       	.word	0x000c	; ????
+    1c82:	00 00       	nop
+    1c84:	00 00       	nop
+    1c86:	02 00       	.word	0x0002	; ????
+    1c88:	00 00       	nop
+    1c8a:	00 00       	nop
+    1c8c:	02 00       	.word	0x0002	; ????
+    1c8e:	00 00       	nop
+    1c90:	00 00       	nop
+    1c92:	0c 00       	.word	0x000c	; ????
+    1c94:	00 00       	nop
+    1c96:	00 00       	nop
+    1c98:	10 00       	.word	0x0010	; ????
+    1c9a:	00 00       	nop
+    1c9c:	00 00       	nop
+    1c9e:	60 00       	.word	0x0060	; ????
+    1ca0:	00 00       	nop
+    1ca2:	00 00       	nop
+    1ca4:	80 00       	.word	0x0080	; ????
+	...
+    1cde:	00 00       	nop
+    1ce0:	0b 00       	.word	0x000b	; ????
+    1ce2:	00 00       	nop
+    1ce4:	00 00       	nop
+    1ce6:	04 00       	.word	0x0004	; ????
+    1ce8:	00 00       	nop
+    1cea:	00 00       	nop
+    1cec:	04 00       	.word	0x0004	; ????
+    1cee:	00 00       	nop
+    1cf0:	00 00       	nop
+    1cf2:	04 00       	.word	0x0004	; ????
+    1cf4:	00 00       	nop
+    1cf6:	00 00       	nop
+    1cf8:	04 00       	.word	0x0004	; ????
+    1cfa:	00 00       	nop
+    1cfc:	00 00       	nop
+    1cfe:	04 00       	.word	0x0004	; ????
+    1d00:	00 00       	nop
+    1d02:	00 00       	nop
+    1d04:	04 00       	.word	0x0004	; ????
+    1d06:	00 00       	nop
+    1d08:	00 00       	nop
+    1d0a:	04 00       	.word	0x0004	; ????
+    1d0c:	00 00       	nop
+    1d0e:	00 00       	nop
+    1d10:	04 00       	.word	0x0004	; ????
+    1d12:	00 00       	nop
+    1d14:	00 00       	nop
+    1d16:	04 00       	.word	0x0004	; ????
+    1d18:	00 00       	nop
+    1d1a:	00 00       	nop
+    1d1c:	04 00       	.word	0x0004	; ????
+    1d1e:	00 00       	nop
+    1d20:	00 00       	nop
+    1d22:	04 00       	.word	0x0004	; ????
+	...
+    1d54:	04 00       	.word	0x0004	; ????
+    1d56:	00 00       	nop
+    1d58:	00 00       	nop
+    1d5a:	00 00       	nop
+    1d5c:	02 00       	.word	0x0002	; ????
+    1d5e:	00 00       	nop
+    1d60:	00 00       	nop
+    1d62:	06 00       	.word	0x0006	; ????
+    1d64:	00 00       	nop
+    1d66:	00 00       	nop
+    1d68:	0c 00       	.word	0x000c	; ????
+	...
+    1dc6:	00 00       	nop
+    1dc8:	09 00       	.word	0x0009	; ????
+    1dca:	00 00       	nop
+    1dcc:	00 00       	nop
+    1dce:	00 00       	nop
+    1dd0:	c0 00       	.word	0x00c0	; ????
+    1dd2:	38 00       	.word	0x0038	; ????
+    1dd4:	00 00       	nop
+    1dd6:	e0 00       	.word	0x00e0	; ????
+    1dd8:	7c 00       	.word	0x007c	; ????
+    1dda:	00 00       	nop
+    1ddc:	20 00       	.word	0x0020	; ????
+    1dde:	46 00       	.word	0x0046	; ????
+    1de0:	00 00       	nop
+    1de2:	20 00       	.word	0x0020	; ????
+    1de4:	42 00       	.word	0x0042	; ????
+    1de6:	00 00       	nop
+    1de8:	20 00       	.word	0x0020	; ????
+    1dea:	21 00       	.word	0x0021	; ????
+    1dec:	00 00       	nop
+    1dee:	e0 00       	.word	0x00e0	; ????
+    1df0:	7f 00       	.word	0x007f	; ????
+    1df2:	00 00       	nop
+    1df4:	c0 00       	.word	0x00c0	; ????
+    1df6:	7f 00       	.word	0x007f	; ????
+    1df8:	00 00       	nop
+    1dfa:	00 00       	nop
+    1dfc:	40 00       	.word	0x0040	; ????
+	...
+    1e3a:	00 00       	nop
+    1e3c:	09 00       	.word	0x0009	; ????
+    1e3e:	02 00       	.word	0x0002	; ????
+    1e40:	00 00       	nop
+    1e42:	00 00       	nop
+    1e44:	ff 00       	.word	0x00ff	; ????
+    1e46:	3f 00       	.word	0x003f	; ????
+    1e48:	00 00       	nop
+    1e4a:	ff 00       	.word	0x00ff	; ????
+    1e4c:	7f 00       	.word	0x007f	; ????
+    1e4e:	00 00       	nop
+    1e50:	40 00       	.word	0x0040	; ????
+    1e52:	60 00       	.word	0x0060	; ????
+    1e54:	00 00       	nop
+    1e56:	20 00       	.word	0x0020	; ????
+    1e58:	40 00       	.word	0x0040	; ????
+    1e5a:	00 00       	nop
+    1e5c:	20 00       	.word	0x0020	; ????
+    1e5e:	40 00       	.word	0x0040	; ????
+    1e60:	00 00       	nop
+    1e62:	60 00       	.word	0x0060	; ????
+    1e64:	20 00       	.word	0x0020	; ????
+    1e66:	00 00       	nop
+    1e68:	c0 00       	.word	0x00c0	; ????
+    1e6a:	3f 00       	.word	0x003f	; ????
+    1e6c:	00 00       	nop
+    1e6e:	80 00       	.word	0x0080	; ????
+    1e70:	0f 00       	.word	0x000f	; ????
+	...
+    1eae:	00 00       	nop
+    1eb0:	08 00       	.word	0x0008	; ????
+    1eb2:	00 00       	nop
+    1eb4:	00 00       	nop
+    1eb6:	00 00       	nop
+    1eb8:	80 00       	.word	0x0080	; ????
+    1eba:	1f 00       	.word	0x001f	; ????
+    1ebc:	00 00       	nop
+    1ebe:	c0 00       	.word	0x00c0	; ????
+    1ec0:	3f 00       	.word	0x003f	; ????
+    1ec2:	00 00       	nop
+    1ec4:	60 00       	.word	0x0060	; ????
+    1ec6:	70 00       	.word	0x0070	; ????
+    1ec8:	00 00       	nop
+    1eca:	20 00       	.word	0x0020	; ????
+    1ecc:	60 00       	.word	0x0060	; ????
+    1ece:	00 00       	nop
+    1ed0:	20 00       	.word	0x0020	; ????
+    1ed2:	60 00       	.word	0x0060	; ????
+    1ed4:	00 00       	nop
+    1ed6:	60 00       	.word	0x0060	; ????
+    1ed8:	20 00       	.word	0x0020	; ????
+    1eda:	00 00       	nop
+    1edc:	c0 00       	.word	0x00c0	; ????
+    1ede:	10 00       	.word	0x0010	; ????
+	...
+    1f24:	0a 00       	.word	0x000a	; ????
+	...
+    1f2e:	1f 00       	.word	0x001f	; ????
+    1f30:	00 00       	nop
+    1f32:	c0 00       	.word	0x00c0	; ????
+    1f34:	3f 00       	.word	0x003f	; ????
+    1f36:	00 00       	nop
+    1f38:	60 00       	.word	0x0060	; ????
+    1f3a:	60 00       	.word	0x0060	; ????
+    1f3c:	00 00       	nop
+    1f3e:	20 00       	.word	0x0020	; ????
+    1f40:	40 00       	.word	0x0040	; ????
+    1f42:	00 00       	nop
+    1f44:	20 00       	.word	0x0020	; ????
+    1f46:	40 00       	.word	0x0040	; ????
+    1f48:	00 00       	nop
+    1f4a:	42 00       	.word	0x0042	; ????
+    1f4c:	20 00       	.word	0x0020	; ????
+    1f4e:	00 00       	nop
+    1f50:	ff 00       	.word	0x00ff	; ????
+    1f52:	7f 00       	.word	0x007f	; ????
+    1f54:	00 00       	nop
+    1f56:	ff 00       	.word	0x00ff	; ????
+    1f58:	7f 00       	.word	0x007f	; ????
+    1f5a:	00 00       	nop
+    1f5c:	00 00       	nop
+    1f5e:	20 00       	.word	0x0020	; ????
+	...
+    1f98:	09 00       	.word	0x0009	; ????
+    1f9a:	00 00       	nop
+    1f9c:	00 00       	nop
+    1f9e:	00 00       	nop
+    1fa0:	80 00       	.word	0x0080	; ????
+    1fa2:	1f 00       	.word	0x001f	; ????
+    1fa4:	00 00       	nop
+    1fa6:	c0 00       	.word	0x00c0	; ????
+    1fa8:	3f 00       	.word	0x003f	; ????
+    1faa:	00 00       	nop
+    1fac:	60 00       	.word	0x0060	; ????
+    1fae:	71 00       	.word	0x0071	; ????
+    1fb0:	00 00       	nop
+    1fb2:	20 00       	.word	0x0020	; ????
+    1fb4:	61 00       	.word	0x0061	; ????
+    1fb6:	00 00       	nop
+    1fb8:	20 00       	.word	0x0020	; ????
+    1fba:	61 00       	.word	0x0061	; ????
+    1fbc:	00 00       	nop
+    1fbe:	60 00       	.word	0x0060	; ????
+    1fc0:	61 00       	.word	0x0061	; ????
+    1fc2:	00 00       	nop
+    1fc4:	c0 00       	.word	0x00c0	; ????
+    1fc6:	21 00       	.word	0x0021	; ????
+    1fc8:	00 00       	nop
+    1fca:	80 00       	.word	0x0080	; ????
+    1fcc:	11 00       	.word	0x0011	; ????
+	...
+    200a:	00 00       	nop
+    200c:	09 00       	.word	0x0009	; ????
+    200e:	20 00       	.word	0x0020	; ????
+    2010:	40 00       	.word	0x0040	; ????
+    2012:	00 00       	nop
+    2014:	20 00       	.word	0x0020	; ????
+    2016:	40 00       	.word	0x0040	; ????
+    2018:	00 00       	nop
+    201a:	fc 00       	.word	0x00fc	; ????
+    201c:	7f 00       	.word	0x007f	; ????
+    201e:	00 00       	nop
+    2020:	fe 00       	.word	0x00fe	; ????
+    2022:	7f 00       	.word	0x007f	; ????
+    2024:	00 00       	nop
+    2026:	21 00       	.word	0x0021	; ????
+    2028:	40 00       	.word	0x0040	; ????
+    202a:	00 00       	nop
+    202c:	21 00       	.word	0x0021	; ????
+    202e:	40 00       	.word	0x0040	; ????
+    2030:	00 00       	nop
+    2032:	01 00       	.word	0x0001	; ????
+    2034:	00 00       	nop
+    2036:	00 00       	nop
+    2038:	07 00       	.word	0x0007	; ????
+    203a:	00 00       	nop
+    203c:	00 00       	nop
+    203e:	06 00       	.word	0x0006	; ????
+	...
+    2080:	0a 00       	.word	0x000a	; ????
+    2082:	00 00       	nop
+    2084:	00 00       	nop
+    2086:	03 00       	.word	0x0003	; ????
+    2088:	80 00       	.word	0x0080	; ????
+    208a:	b3 00       	.word	0x00b3	; ????
+    208c:	06 00       	.word	0x0006	; ????
+    208e:	c0 00       	.word	0x00c0	; ????
+    2090:	77 00       	.word	0x0077	; ????
+    2092:	04 00       	.word	0x0004	; ????
+    2094:	60 00       	.word	0x0060	; ????
+    2096:	6c 00       	.word	0x006c	; ????
+    2098:	04 00       	.word	0x0004	; ????
+    209a:	20 00       	.word	0x0020	; ????
+    209c:	68 00       	.word	0x0068	; ????
+    209e:	04 00       	.word	0x0004	; ????
+    20a0:	20 00       	.word	0x0020	; ????
+    20a2:	68 00       	.word	0x0068	; ????
+    20a4:	04 00       	.word	0x0004	; ????
+    20a6:	60 00       	.word	0x0060	; ????
+    20a8:	6c 00       	.word	0x006c	; ????
+    20aa:	04 00       	.word	0x0004	; ????
+    20ac:	c0 00       	.word	0x00c0	; ????
+    20ae:	67 00       	.word	0x0067	; ????
+    20b0:	04 00       	.word	0x0004	; ????
+    20b2:	c0 00       	.word	0x00c0	; ????
+    20b4:	63 00       	.word	0x0063	; ????
+    20b6:	02 00       	.word	0x0002	; ????
+    20b8:	40 00       	.word	0x0040	; ????
+    20ba:	c0 00       	.word	0x00c0	; ????
+    20bc:	01 00       	.word	0x0001	; ????
+	...
+    20f2:	00 00       	nop
+    20f4:	0a 00       	.word	0x000a	; ????
+    20f6:	02 00       	.word	0x0002	; ????
+    20f8:	40 00       	.word	0x0040	; ????
+    20fa:	00 00       	nop
+    20fc:	ff 00       	.word	0x00ff	; ????
+    20fe:	7f 00       	.word	0x007f	; ????
+    2100:	00 00       	nop
+    2102:	ff 00       	.word	0x00ff	; ????
+    2104:	7f 00       	.word	0x007f	; ????
+    2106:	00 00       	nop
+    2108:	40 00       	.word	0x0040	; ????
+    210a:	40 00       	.word	0x0040	; ????
+    210c:	00 00       	nop
+    210e:	40 00       	.word	0x0040	; ????
+    2110:	00 00       	nop
+    2112:	00 00       	nop
+    2114:	20 00       	.word	0x0020	; ????
+    2116:	00 00       	nop
+    2118:	00 00       	nop
+    211a:	20 00       	.word	0x0020	; ????
+    211c:	40 00       	.word	0x0040	; ????
+    211e:	00 00       	nop
+    2120:	e0 00       	.word	0x00e0	; ????
+    2122:	7f 00       	.word	0x007f	; ????
+    2124:	00 00       	nop
+    2126:	c0 00       	.word	0x00c0	; ????
+    2128:	7f 00       	.word	0x007f	; ????
+    212a:	00 00       	nop
+    212c:	00 00       	nop
+    212e:	40 00       	.word	0x0040	; ????
+	...
+    2168:	05 00       	.word	0x0005	; ????
+    216a:	00 00       	nop
+    216c:	00 00       	nop
+    216e:	00 00       	nop
+    2170:	40 00       	.word	0x0040	; ????
+    2172:	40 00       	.word	0x0040	; ????
+    2174:	00 00       	nop
+    2176:	e3 00       	.word	0x00e3	; ????
+    2178:	7f 00       	.word	0x007f	; ????
+    217a:	00 00       	nop
+    217c:	e3 00       	.word	0x00e3	; ????
+    217e:	7f 00       	.word	0x007f	; ????
+    2180:	00 00       	nop
+    2182:	00 00       	nop
+    2184:	40 00       	.word	0x0040	; ????
+	...
+    21da:	00 00       	nop
+    21dc:	04 00       	.word	0x0004	; ????
+    21de:	00 00       	nop
+    21e0:	00 00       	nop
+    21e2:	04 00       	.word	0x0004	; ????
+    21e4:	40 00       	.word	0x0040	; ????
+    21e6:	00 00       	nop
+    21e8:	04 00       	.word	0x0004	; ????
+    21ea:	e3 00       	.word	0x00e3	; ????
+    21ec:	ff 00       	.word	0x00ff	; ????
+    21ee:	03 00       	.word	0x0003	; ????
+    21f0:	e3 00       	.word	0x00e3	; ????
+    21f2:	ff 00       	.word	0x00ff	; ????
+    21f4:	01 00       	.word	0x0001	; ????
+	...
+    224e:	00 00       	nop
+    2250:	0a 00       	.word	0x000a	; ????
+    2252:	02 00       	.word	0x0002	; ????
+    2254:	40 00       	.word	0x0040	; ????
+    2256:	00 00       	nop
+    2258:	ff 00       	.word	0x00ff	; ????
+    225a:	7f 00       	.word	0x007f	; ????
+    225c:	00 00       	nop
+    225e:	ff 00       	.word	0x00ff	; ????
+    2260:	7f 00       	.word	0x007f	; ????
+    2262:	00 00       	nop
+    2264:	00 00       	nop
+    2266:	42 00       	.word	0x0042	; ????
+    2268:	00 00       	nop
+    226a:	00 00       	nop
+    226c:	07 00       	.word	0x0007	; ????
+    226e:	00 00       	nop
+    2270:	a0 00       	.word	0x00a0	; ????
+    2272:	0c 00       	.word	0x000c	; ????
+    2274:	00 00       	nop
+    2276:	60 00       	.word	0x0060	; ????
+    2278:	58 00       	.word	0x0058	; ????
+    227a:	00 00       	nop
+    227c:	20 00       	.word	0x0020	; ????
+    227e:	70 00       	.word	0x0070	; ????
+    2280:	00 00       	nop
+    2282:	20 00       	.word	0x0020	; ????
+    2284:	60 00       	.word	0x0060	; ????
+    2286:	00 00       	nop
+    2288:	00 00       	nop
+    228a:	40 00       	.word	0x0040	; ????
+	...
+    22c4:	05 00       	.word	0x0005	; ????
+    22c6:	00 00       	nop
+    22c8:	00 00       	nop
+    22ca:	00 00       	nop
+    22cc:	02 00       	.word	0x0002	; ????
+    22ce:	40 00       	.word	0x0040	; ????
+    22d0:	00 00       	nop
+    22d2:	ff 00       	.word	0x00ff	; ????
+    22d4:	7f 00       	.word	0x007f	; ????
+    22d6:	00 00       	nop
+    22d8:	ff 00       	.word	0x00ff	; ????
+    22da:	7f 00       	.word	0x007f	; ????
+    22dc:	00 00       	nop
+    22de:	00 00       	nop
+    22e0:	40 00       	.word	0x0040	; ????
+	...
+    2336:	00 00       	nop
+    2338:	10 00       	.word	0x0010	; ????
+    233a:	40 00       	.word	0x0040	; ????
+    233c:	40 00       	.word	0x0040	; ????
+    233e:	00 00       	nop
+    2340:	e0 00       	.word	0x00e0	; ????
+    2342:	7f 00       	.word	0x007f	; ????
+    2344:	00 00       	nop
+    2346:	e0 00       	.word	0x00e0	; ????
+    2348:	7f 00       	.word	0x007f	; ????
+    234a:	00 00       	nop
+    234c:	40 00       	.word	0x0040	; ????
+    234e:	40 00       	.word	0x0040	; ????
+    2350:	00 00       	nop
+    2352:	40 00       	.word	0x0040	; ????
+    2354:	00 00       	nop
+    2356:	00 00       	nop
+    2358:	20 00       	.word	0x0020	; ????
+    235a:	00 00       	nop
+    235c:	00 00       	nop
+    235e:	20 00       	.word	0x0020	; ????
+    2360:	40 00       	.word	0x0040	; ????
+    2362:	00 00       	nop
+    2364:	e0 00       	.word	0x00e0	; ????
+    2366:	7f 00       	.word	0x007f	; ????
+    2368:	00 00       	nop
+    236a:	c0 00       	.word	0x00c0	; ????
+    236c:	7f 00       	.word	0x007f	; ????
+    236e:	00 00       	nop
+    2370:	40 00       	.word	0x0040	; ????
+    2372:	40 00       	.word	0x0040	; ????
+    2374:	00 00       	nop
+    2376:	40 00       	.word	0x0040	; ????
+    2378:	00 00       	nop
+    237a:	00 00       	nop
+    237c:	20 00       	.word	0x0020	; ????
+    237e:	00 00       	nop
+    2380:	00 00       	nop
+    2382:	20 00       	.word	0x0020	; ????
+    2384:	40 00       	.word	0x0040	; ????
+    2386:	00 00       	nop
+    2388:	e0 00       	.word	0x00e0	; ????
+    238a:	7f 00       	.word	0x007f	; ????
+    238c:	00 00       	nop
+    238e:	c0 00       	.word	0x00c0	; ????
+    2390:	7f 00       	.word	0x007f	; ????
+    2392:	00 00       	nop
+    2394:	00 00       	nop
+    2396:	40 00       	.word	0x0040	; ????
+	...
+    23ac:	0a 00       	.word	0x000a	; ????
+    23ae:	40 00       	.word	0x0040	; ????
+    23b0:	40 00       	.word	0x0040	; ????
+    23b2:	00 00       	nop
+    23b4:	e0 00       	.word	0x00e0	; ????
+    23b6:	7f 00       	.word	0x007f	; ????
+    23b8:	00 00       	nop
+    23ba:	e0 00       	.word	0x00e0	; ????
+    23bc:	7f 00       	.word	0x007f	; ????
+    23be:	00 00       	nop
+    23c0:	40 00       	.word	0x0040	; ????
+    23c2:	40 00       	.word	0x0040	; ????
+    23c4:	00 00       	nop
+    23c6:	40 00       	.word	0x0040	; ????
+    23c8:	00 00       	nop
+    23ca:	00 00       	nop
+    23cc:	20 00       	.word	0x0020	; ????
+    23ce:	00 00       	nop
+    23d0:	00 00       	nop
+    23d2:	20 00       	.word	0x0020	; ????
+    23d4:	40 00       	.word	0x0040	; ????
+    23d6:	00 00       	nop
+    23d8:	e0 00       	.word	0x00e0	; ????
+    23da:	7f 00       	.word	0x007f	; ????
+    23dc:	00 00       	nop
+    23de:	c0 00       	.word	0x00c0	; ????
+    23e0:	7f 00       	.word	0x007f	; ????
+    23e2:	00 00       	nop
+    23e4:	00 00       	nop
+    23e6:	40 00       	.word	0x0040	; ????
+	...
+    2420:	0a 00       	.word	0x000a	; ????
+	...
+    242a:	0f 00       	.word	0x000f	; ????
+    242c:	00 00       	nop
+    242e:	c0 00       	.word	0x00c0	; ????
+    2430:	3f 00       	.word	0x003f	; ????
+    2432:	00 00       	nop
+    2434:	40 00       	.word	0x0040	; ????
+    2436:	70 00       	.word	0x0070	; ????
+    2438:	00 00       	nop
+    243a:	20 00       	.word	0x0020	; ????
+    243c:	40 00       	.word	0x0040	; ????
+    243e:	00 00       	nop
+    2440:	20 00       	.word	0x0020	; ????
+    2442:	40 00       	.word	0x0040	; ????
+    2444:	00 00       	nop
+    2446:	60 00       	.word	0x0060	; ????
+    2448:	40 00       	.word	0x0040	; ????
+    244a:	00 00       	nop
+    244c:	c0 00       	.word	0x00c0	; ????
+    244e:	20 00       	.word	0x0020	; ????
+    2450:	00 00       	nop
+    2452:	c0 00       	.word	0x00c0	; ????
+    2454:	3f 00       	.word	0x003f	; ????
+    2456:	00 00       	nop
+    2458:	00 00       	nop
+    245a:	0f 00       	.word	0x000f	; ????
+	...
+    2494:	09 00       	.word	0x0009	; ????
+    2496:	40 00       	.word	0x0040	; ????
+    2498:	00 00       	nop
+    249a:	04 00       	.word	0x0004	; ????
+    249c:	e0 00       	.word	0x00e0	; ????
+    249e:	ff 00       	.word	0x00ff	; ????
+    24a0:	07 00       	.word	0x0007	; ????
+    24a2:	e0 00       	.word	0x00e0	; ????
+    24a4:	ff 00       	.word	0x00ff	; ????
+    24a6:	07 00       	.word	0x0007	; ????
+    24a8:	40 00       	.word	0x0040	; ????
+    24aa:	20 00       	.word	0x0020	; ????
+    24ac:	04 00       	.word	0x0004	; ????
+    24ae:	20 00       	.word	0x0020	; ????
+    24b0:	40 00       	.word	0x0040	; ????
+    24b2:	00 00       	nop
+    24b4:	20 00       	.word	0x0020	; ????
+    24b6:	40 00       	.word	0x0040	; ????
+    24b8:	00 00       	nop
+    24ba:	60 00       	.word	0x0060	; ????
+    24bc:	60 00       	.word	0x0060	; ????
+    24be:	00 00       	nop
+    24c0:	c0 00       	.word	0x00c0	; ????
+    24c2:	3f 00       	.word	0x003f	; ????
+    24c4:	00 00       	nop
+    24c6:	80 00       	.word	0x0080	; ????
+    24c8:	0f 00       	.word	0x000f	; ????
+	...
+    2506:	00 00       	nop
+    2508:	0a 00       	.word	0x000a	; ????
+	...
+    2512:	1f 00       	.word	0x001f	; ????
+    2514:	00 00       	nop
+    2516:	c0 00       	.word	0x00c0	; ????
+    2518:	3f 00       	.word	0x003f	; ????
+    251a:	00 00       	nop
+    251c:	60 00       	.word	0x0060	; ????
+    251e:	60 00       	.word	0x0060	; ????
+    2520:	00 00       	nop
+    2522:	20 00       	.word	0x0020	; ????
+    2524:	40 00       	.word	0x0040	; ????
+    2526:	00 00       	nop
+    2528:	20 00       	.word	0x0020	; ????
+    252a:	40 00       	.word	0x0040	; ????
+    252c:	00 00       	nop
+    252e:	60 00       	.word	0x0060	; ????
+    2530:	20 00       	.word	0x0020	; ????
+    2532:	04 00       	.word	0x0004	; ????
+    2534:	c0 00       	.word	0x00c0	; ????
+    2536:	ff 00       	.word	0x00ff	; ????
+    2538:	07 00       	.word	0x0007	; ????
+    253a:	e0 00       	.word	0x00e0	; ????
+    253c:	ff 00       	.word	0x00ff	; ????
+    253e:	07 00       	.word	0x0007	; ????
+    2540:	00 00       	nop
+    2542:	00 00       	nop
+    2544:	04 00       	.word	0x0004	; ????
+	...
+    257a:	00 00       	nop
+    257c:	07 00       	.word	0x0007	; ????
+    257e:	40 00       	.word	0x0040	; ????
+    2580:	40 00       	.word	0x0040	; ????
+    2582:	00 00       	nop
+    2584:	e0 00       	.word	0x00e0	; ????
+    2586:	7f 00       	.word	0x007f	; ????
+    2588:	00 00       	nop
+    258a:	e0 00       	.word	0x00e0	; ????
+    258c:	7f 00       	.word	0x007f	; ????
+    258e:	00 00       	nop
+    2590:	40 00       	.word	0x0040	; ????
+    2592:	40 00       	.word	0x0040	; ????
+    2594:	00 00       	nop
+    2596:	20 00       	.word	0x0020	; ????
+    2598:	00 00       	nop
+    259a:	00 00       	nop
+    259c:	60 00       	.word	0x0060	; ????
+    259e:	00 00       	nop
+    25a0:	00 00       	nop
+    25a2:	60 00       	.word	0x0060	; ????
+	...
+    25f0:	07 00       	.word	0x0007	; ????
+    25f2:	00 00       	nop
+    25f4:	00 00       	nop
+    25f6:	00 00       	nop
+    25f8:	c0 00       	.word	0x00c0	; ????
+    25fa:	73 00       	.word	0x0073	; ????
+    25fc:	00 00       	nop
+    25fe:	20 00       	.word	0x0020	; ????
+    2600:	27 00       	.word	0x0027	; ????
+    2602:	00 00       	nop
+    2604:	20 00       	.word	0x0020	; ????
+    2606:	46 00       	.word	0x0046	; ????
+    2608:	00 00       	nop
+    260a:	20 00       	.word	0x0020	; ????
+    260c:	46 00       	.word	0x0046	; ????
+    260e:	00 00       	nop
+    2610:	40 00       	.word	0x0040	; ????
+    2612:	4e 00       	.word	0x004e	; ????
+    2614:	00 00       	nop
+    2616:	e0 00       	.word	0x00e0	; ????
+    2618:	3c 00       	.word	0x003c	; ????
+	...
+    2662:	00 00       	nop
+    2664:	06 00       	.word	0x0006	; ????
+    2666:	20 00       	.word	0x0020	; ????
+    2668:	00 00       	nop
+    266a:	00 00       	nop
+    266c:	f8 00       	.word	0x00f8	; ????
+    266e:	3f 00       	.word	0x003f	; ????
+    2670:	00 00       	nop
+    2672:	fc 00       	.word	0x00fc	; ????
+    2674:	7f 00       	.word	0x007f	; ????
+    2676:	00 00       	nop
+    2678:	20 00       	.word	0x0020	; ????
+    267a:	40 00       	.word	0x0040	; ????
+    267c:	00 00       	nop
+    267e:	20 00       	.word	0x0020	; ????
+    2680:	40 00       	.word	0x0040	; ????
+    2682:	00 00       	nop
+    2684:	00 00       	nop
+    2686:	20 00       	.word	0x0020	; ????
+	...
+    26d8:	0a 00       	.word	0x000a	; ????
+    26da:	20 00       	.word	0x0020	; ????
+    26dc:	00 00       	nop
+    26de:	00 00       	nop
+    26e0:	e0 00       	.word	0x00e0	; ????
+    26e2:	3f 00       	.word	0x003f	; ????
+    26e4:	00 00       	nop
+    26e6:	e0 00       	.word	0x00e0	; ????
+    26e8:	7f 00       	.word	0x007f	; ????
+    26ea:	00 00       	nop
+    26ec:	00 00       	nop
+    26ee:	40 00       	.word	0x0040	; ????
+    26f0:	00 00       	nop
+    26f2:	00 00       	nop
+    26f4:	40 00       	.word	0x0040	; ????
+    26f6:	00 00       	nop
+    26f8:	00 00       	nop
+    26fa:	40 00       	.word	0x0040	; ????
+    26fc:	00 00       	nop
+    26fe:	20 00       	.word	0x0020	; ????
+    2700:	20 00       	.word	0x0020	; ????
+    2702:	00 00       	nop
+    2704:	e0 00       	.word	0x00e0	; ????
+    2706:	7f 00       	.word	0x007f	; ????
+    2708:	00 00       	nop
+    270a:	e0 00       	.word	0x00e0	; ????
+    270c:	7f 00       	.word	0x007f	; ????
+    270e:	00 00       	nop
+    2710:	00 00       	nop
+    2712:	20 00       	.word	0x0020	; ????
+	...
+    274c:	0a 00       	.word	0x000a	; ????
+    274e:	20 00       	.word	0x0020	; ????
+    2750:	00 00       	nop
+    2752:	00 00       	nop
+    2754:	60 00       	.word	0x0060	; ????
+    2756:	00 00       	nop
+    2758:	00 00       	nop
+    275a:	e0 00       	.word	0x00e0	; ????
+    275c:	03 00       	.word	0x0003	; ????
+    275e:	00 00       	nop
+    2760:	a0 00       	.word	0x00a0	; ????
+    2762:	1f 00       	.word	0x001f	; ????
+    2764:	00 00       	nop
+    2766:	20 00       	.word	0x0020	; ????
+    2768:	7c 00       	.word	0x007c	; ????
+    276a:	00 00       	nop
+    276c:	00 00       	nop
+    276e:	60 00       	.word	0x0060	; ????
+    2770:	00 00       	nop
+    2772:	00 00       	nop
+    2774:	18 00       	.word	0x0018	; ????
+    2776:	00 00       	nop
+    2778:	20 00       	.word	0x0020	; ????
+    277a:	07 00       	.word	0x0007	; ????
+    277c:	00 00       	nop
+    277e:	e0 00       	.word	0x00e0	; ????
+    2780:	00 00       	nop
+    2782:	00 00       	nop
+    2784:	20 00       	.word	0x0020	; ????
+	...
+    27be:	00 00       	nop
+    27c0:	0f 00       	.word	0x000f	; ????
+    27c2:	20 00       	.word	0x0020	; ????
+    27c4:	00 00       	nop
+    27c6:	00 00       	nop
+    27c8:	e0 00       	.word	0x00e0	; ????
+    27ca:	00 00       	nop
+    27cc:	00 00       	nop
+    27ce:	e0 00       	.word	0x00e0	; ????
+    27d0:	07 00       	.word	0x0007	; ????
+    27d2:	00 00       	nop
+    27d4:	20 00       	.word	0x0020	; ????
+    27d6:	3f 00       	.word	0x003f	; ????
+    27d8:	00 00       	nop
+    27da:	00 00       	nop
+    27dc:	78 00       	.word	0x0078	; ????
+    27de:	00 00       	nop
+    27e0:	00 00       	nop
+    27e2:	18 00       	.word	0x0018	; ????
+    27e4:	00 00       	nop
+    27e6:	20 00       	.word	0x0020	; ????
+    27e8:	06 00       	.word	0x0006	; ????
+    27ea:	00 00       	nop
+    27ec:	e0 00       	.word	0x00e0	; ????
+    27ee:	01 00       	.word	0x0001	; ????
+    27f0:	00 00       	nop
+    27f2:	e0 00       	.word	0x00e0	; ????
+    27f4:	07 00       	.word	0x0007	; ????
+    27f6:	00 00       	nop
+    27f8:	20 00       	.word	0x0020	; ????
+    27fa:	3f 00       	.word	0x003f	; ????
+    27fc:	00 00       	nop
+    27fe:	00 00       	nop
+    2800:	78 00       	.word	0x0078	; ????
+    2802:	00 00       	nop
+    2804:	00 00       	nop
+    2806:	1c 00       	.word	0x001c	; ????
+    2808:	00 00       	nop
+    280a:	20 00       	.word	0x0020	; ????
+    280c:	03 00       	.word	0x0003	; ????
+    280e:	00 00       	nop
+    2810:	e0 00       	.word	0x00e0	; ????
+    2812:	00 00       	nop
+    2814:	00 00       	nop
+    2816:	20 00       	.word	0x0020	; ????
+	...
+    2834:	0a 00       	.word	0x000a	; ????
+    2836:	20 00       	.word	0x0020	; ????
+    2838:	40 00       	.word	0x0040	; ????
+    283a:	00 00       	nop
+    283c:	60 00       	.word	0x0060	; ????
+    283e:	60 00       	.word	0x0060	; ????
+    2840:	00 00       	nop
+    2842:	e0 00       	.word	0x00e0	; ????
+    2844:	50 00       	.word	0x0050	; ????
+    2846:	00 00       	nop
+    2848:	a0 00       	.word	0x00a0	; ????
+    284a:	09 00       	.word	0x0009	; ????
+    284c:	00 00       	nop
+    284e:	00 00       	nop
+    2850:	07 00       	.word	0x0007	; ????
+    2852:	00 00       	nop
+    2854:	00 00       	nop
+    2856:	0f 00       	.word	0x000f	; ????
+    2858:	00 00       	nop
+    285a:	a0 00       	.word	0x00a0	; ????
+    285c:	58 00       	.word	0x0058	; ????
+    285e:	00 00       	nop
+    2860:	60 00       	.word	0x0060	; ????
+    2862:	70 00       	.word	0x0070	; ????
+    2864:	00 00       	nop
+    2866:	20 00       	.word	0x0020	; ????
+    2868:	60 00       	.word	0x0060	; ????
+    286a:	00 00       	nop
+    286c:	20 00       	.word	0x0020	; ????
+    286e:	40 00       	.word	0x0040	; ????
+	...
+    28a8:	09 00       	.word	0x0009	; ????
+    28aa:	60 00       	.word	0x0060	; ????
+    28ac:	00 00       	nop
+    28ae:	06 00       	.word	0x0006	; ????
+    28b0:	e0 00       	.word	0x00e0	; ????
+    28b2:	00 00       	nop
+    28b4:	06 00       	.word	0x0006	; ????
+    28b6:	e0 00       	.word	0x00e0	; ????
+    28b8:	07 00       	.word	0x0007	; ????
+    28ba:	06 00       	.word	0x0006	; ????
+    28bc:	20 00       	.word	0x0020	; ????
+    28be:	1f 00       	.word	0x001f	; ????
+    28c0:	03 00       	.word	0x0003	; ????
+    28c2:	00 00       	nop
+    28c4:	f8 00       	.word	0x00f8	; ????
+    28c6:	00 00       	nop
+    28c8:	00 00       	nop
+    28ca:	38 00       	.word	0x0038	; ????
+    28cc:	00 00       	nop
+    28ce:	20 00       	.word	0x0020	; ????
+    28d0:	07 00       	.word	0x0007	; ????
+    28d2:	00 00       	nop
+    28d4:	e0 00       	.word	0x00e0	; ????
+    28d6:	00 00       	nop
+    28d8:	00 00       	nop
+    28da:	20 00       	.word	0x0020	; ????
+	...
+    291c:	09 00       	.word	0x0009	; ????
+    291e:	00 00       	nop
+    2920:	40 00       	.word	0x0040	; ????
+    2922:	00 00       	nop
+    2924:	60 00       	.word	0x0060	; ????
+    2926:	60 00       	.word	0x0060	; ????
+    2928:	00 00       	nop
+    292a:	20 00       	.word	0x0020	; ????
+    292c:	78 00       	.word	0x0078	; ????
+    292e:	00 00       	nop
+    2930:	20 00       	.word	0x0020	; ????
+    2932:	5c 00       	.word	0x005c	; ????
+    2934:	00 00       	nop
+    2936:	20 00       	.word	0x0020	; ????
+    2938:	46 00       	.word	0x0046	; ????
+    293a:	00 00       	nop
+    293c:	a0 00       	.word	0x00a0	; ????
+    293e:	43 00       	.word	0x0043	; ????
+    2940:	00 00       	nop
+    2942:	e0 00       	.word	0x00e0	; ????
+    2944:	41 00       	.word	0x0041	; ????
+    2946:	00 00       	nop
+    2948:	60 00       	.word	0x0060	; ????
+    294a:	40 00       	.word	0x0040	; ????
+    294c:	00 00       	nop
+    294e:	20 00       	.word	0x0020	; ????
+    2950:	60 00       	.word	0x0060	; ????
+	...
+    298e:	00 00       	nop
+    2990:	08 00       	.word	0x0008	; ????
+	...
+    299e:	00 00       	nop
+    29a0:	02 00       	.word	0x0002	; ????
+    29a2:	00 00       	nop
+    29a4:	00 00       	nop
+    29a6:	05 00       	.word	0x0005	; ????
+    29a8:	00 00       	nop
+    29aa:	fc 00       	.word	0x00fc	; ????
+    29ac:	fd 00       	.word	0x00fd	; ????
+    29ae:	01 00       	.word	0x0001	; ????
+    29b0:	fe 00       	.word	0x00fe	; ????
+    29b2:	f8 00       	.word	0x00f8	; ????
+    29b4:	03 00       	.word	0x0003	; ????
+    29b6:	03 00       	.word	0x0003	; ????
+    29b8:	00 00       	nop
+    29ba:	06 00       	.word	0x0006	; ????
+    29bc:	01 00       	.word	0x0001	; ????
+    29be:	00 00       	nop
+    29c0:	04 00       	.word	0x0004	; ????
+	...
+    2a02:	00 00       	nop
+    2a04:	02 00       	.word	0x0002	; ????
+    2a06:	00 00       	nop
+    2a08:	00 00       	nop
+    2a0a:	00 00       	nop
+    2a0c:	ff 00       	.word	0x00ff	; ????
+    2a0e:	ff 00       	.word	0x00ff	; ????
+    2a10:	07 00       	.word	0x0007	; ????
+	...
+    2a76:	00 00       	nop
+    2a78:	08 00       	.word	0x0008	; ????
+	...
+    2a86:	01 00       	.word	0x0001	; ????
+    2a88:	00 00       	nop
+    2a8a:	04 00       	.word	0x0004	; ????
+    2a8c:	03 00       	.word	0x0003	; ????
+    2a8e:	00 00       	nop
+    2a90:	06 00       	.word	0x0006	; ????
+    2a92:	fe 00       	.word	0x00fe	; ????
+    2a94:	f8 00       	.word	0x00f8	; ????
+    2a96:	03 00       	.word	0x0003	; ????
+    2a98:	fc 00       	.word	0x00fc	; ????
+    2a9a:	fd 00       	.word	0x00fd	; ????
+    2a9c:	01 00       	.word	0x0001	; ????
+    2a9e:	00 00       	nop
+    2aa0:	05 00       	.word	0x0005	; ????
+    2aa2:	00 00       	nop
+    2aa4:	00 00       	nop
+    2aa6:	02 00       	.word	0x0002	; ????
+	...
+    2aec:	0b 00       	.word	0x000b	; ????
+    2aee:	00 00       	nop
+    2af0:	06 00       	.word	0x0006	; ????
+    2af2:	00 00       	nop
+    2af4:	00 00       	nop
+    2af6:	01 00       	.word	0x0001	; ????
+    2af8:	00 00       	nop
+    2afa:	00 00       	nop
+    2afc:	01 00       	.word	0x0001	; ????
+    2afe:	00 00       	nop
+    2b00:	00 00       	nop
+    2b02:	01 00       	.word	0x0001	; ????
+    2b04:	00 00       	nop
+    2b06:	00 00       	nop
+    2b08:	02 00       	.word	0x0002	; ????
+    2b0a:	00 00       	nop
+    2b0c:	00 00       	nop
+    2b0e:	02 00       	.word	0x0002	; ????
+    2b10:	00 00       	nop
+    2b12:	00 00       	nop
+    2b14:	02 00       	.word	0x0002	; ????
+    2b16:	00 00       	nop
+    2b18:	00 00       	nop
+    2b1a:	04 00       	.word	0x0004	; ????
+    2b1c:	00 00       	nop
+    2b1e:	00 00       	nop
+    2b20:	04 00       	.word	0x0004	; ????
+    2b22:	00 00       	nop
+    2b24:	00 00       	nop
+    2b26:	04 00       	.word	0x0004	; ????
+    2b28:	00 00       	nop
+    2b2a:	00 00       	nop
+    2b2c:	03 00       	.word	0x0003	; ????
+	...
+
+00002b60 <__ctors_end>:
+    2b60:	11 24       	eor	r1, r1
+    2b62:	1f be       	out	0x3f, r1	; 63
+    2b64:	cf e5       	ldi	r28, 0x5F	; 95
+    2b66:	d8 e0       	ldi	r29, 0x08	; 8
+    2b68:	de bf       	out	0x3e, r29	; 62
+    2b6a:	cd bf       	out	0x3d, r28	; 61
+
+00002b6c <__do_copy_data>:
+    2b6c:	10 e0       	ldi	r17, 0x00	; 0
+    2b6e:	a0 e6       	ldi	r26, 0x60	; 96
+    2b70:	b0 e0       	ldi	r27, 0x00	; 0
+    2b72:	e6 eb       	ldi	r30, 0xB6	; 182
+    2b74:	f0 e3       	ldi	r31, 0x30	; 48
+    2b76:	02 c0       	rjmp	.+4      	; 0x2b7c <__do_copy_data+0x10>
+    2b78:	05 90       	lpm	r0, Z+
+    2b7a:	0d 92       	st	X+, r0
+    2b7c:	a4 37       	cpi	r26, 0x74	; 116
+    2b7e:	b1 07       	cpc	r27, r17
+    2b80:	d9 f7       	brne	.-10     	; 0x2b78 <__do_copy_data+0xc>
+
+00002b82 <__do_clear_bss>:
+    2b82:	24 e0       	ldi	r18, 0x04	; 4
+    2b84:	a4 e7       	ldi	r26, 0x74	; 116
+    2b86:	b0 e0       	ldi	r27, 0x00	; 0
+    2b88:	01 c0       	rjmp	.+2      	; 0x2b8c <.do_clear_bss_start>
+
+00002b8a <.do_clear_bss_loop>:
+    2b8a:	1d 92       	st	X+, r1
+
+00002b8c <.do_clear_bss_start>:
+    2b8c:	a6 37       	cpi	r26, 0x76	; 118
+    2b8e:	b2 07       	cpc	r27, r18
+    2b90:	e1 f7       	brne	.-8      	; 0x2b8a <.do_clear_bss_loop>
+    2b92:	0e 94 95 17 	call	0x2f2a	; 0x2f2a <main>
+    2b96:	0c 94 59 18 	jmp	0x30b2	; 0x30b2 <_exit>
+
+00002b9a <__bad_interrupt>:
+    2b9a:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00002b9e <i2c_init>:
+uint8_t address;
+uint8_t twi_status_register;
+
+void i2c_init(uint8_t start_address)
+{
+    TWSR = 0;
+    2b9e:	11 b8       	out	0x01, r1	; 1
+    TWBR = ((F_CPU/SCL_CLOCK)-16)/2;
+    2ba0:	90 e2       	ldi	r25, 0x20	; 32
+    2ba2:	90 b9       	out	0x00, r25	; 0
+    address = start_address;
+    2ba4:	80 93 74 00 	sts	0x0074, r24	; 0x800074 <__data_end>
+    2ba8:	08 95       	ret
+
+00002baa <i2c_start>:
+}    
+
+uint8_t i2c_start() 
+{
+    TWCR = (1<<TWINT) | (1<<TWSTA) | (1<<TWEN);
+    2baa:	84 ea       	ldi	r24, 0xA4	; 164
+    2bac:	86 bf       	out	0x36, r24	; 54
+    while(!(TWCR & (1<<TWINT)));
+    2bae:	06 b6       	in	r0, 0x36	; 54
+    2bb0:	07 fe       	sbrs	r0, 7
+    2bb2:	fd cf       	rjmp	.-6      	; 0x2bae <i2c_start+0x4>
+    uint8_t twi_status_register = TW_STATUS & 0xF8;
+    if ((twi_status_register != TW_START) && (this->twi_status_register != TW_REP_START)) {
+        return 1;
+    }
+*/
+    TWDR = address;
+    2bb4:	80 91 74 00 	lds	r24, 0x0074	; 0x800074 <__data_end>
+    2bb8:	83 b9       	out	0x03, r24	; 3
+    TWCR = (1<<TWINT) | (1<<TWEN);
+    2bba:	84 e8       	ldi	r24, 0x84	; 132
+    2bbc:	86 bf       	out	0x36, r24	; 54
+
+    while(!(TWCR & (1<<TWINT)));
+    2bbe:	06 b6       	in	r0, 0x36	; 54
+    2bc0:	07 fe       	sbrs	r0, 7
+    2bc2:	fd cf       	rjmp	.-6      	; 0x2bbe <i2c_start+0x14>
+    if ((twi_status_register != TW_MT_SLA_ACK) && (twi_status_register != TW_MR_SLA_ACK)) {
+        return 1;
+    }
+*/
+    return 0;
+}
+    2bc4:	80 e0       	ldi	r24, 0x00	; 0
+    2bc6:	08 95       	ret
+
+00002bc8 <i2c_write>:
+
+uint8_t i2c_write(uint8_t data) 
+{
+    TWDR = data;
+    2bc8:	83 b9       	out	0x03, r24	; 3
+    TWCR = (1<<TWINT) | (1<<TWEN);
+    2bca:	84 e8       	ldi	r24, 0x84	; 132
+    2bcc:	86 bf       	out	0x36, r24	; 54
+
+    while(!(TWCR & (1<<TWINT)));
+    2bce:	06 b6       	in	r0, 0x36	; 54
+    2bd0:	07 fe       	sbrs	r0, 7
+    2bd2:	fd cf       	rjmp	.-6      	; 0x2bce <i2c_write+0x6>
+        } else {
+        return 0;
+    }
+    */
+    return 0;
+}
+    2bd4:	80 e0       	ldi	r24, 0x00	; 0
+    2bd6:	08 95       	ret
+
+00002bd8 <i2c_stop>:
+
+void i2c_stop(void) 
+{
+    TWCR = (1<<TWINT) | (1<<TWEN) | (1<<TWSTO);
+    2bd8:	84 e9       	ldi	r24, 0x94	; 148
+    2bda:	86 bf       	out	0x36, r24	; 54
+    while(TWCR & (1<<TWSTO));
+    2bdc:	06 b6       	in	r0, 0x36	; 54
+    2bde:	04 fc       	sbrc	r0, 4
+    2be0:	fd cf       	rjmp	.-6      	; 0x2bdc <i2c_stop+0x4>
+    2be2:	08 95       	ret
+
+00002be4 <display_draw_pixel>:
+}
+
+void display_clear_invert()
+{
+	display_draw_rectangle(0,0,64,128,1,0);
+}
+    2be4:	88 23       	and	r24, r24
+    2be6:	a4 f1       	brlt	.+104    	; 0x2c50 <display_draw_pixel+0x6c>
+    2be8:	60 34       	cpi	r22, 0x40	; 64
+    2bea:	90 f5       	brcc	.+100    	; 0x2c50 <display_draw_pixel+0x6c>
+    2bec:	44 23       	and	r20, r20
+    2bee:	c1 f0       	breq	.+48     	; 0x2c20 <display_draw_pixel+0x3c>
+    2bf0:	e6 2f       	mov	r30, r22
+    2bf2:	e6 95       	lsr	r30
+    2bf4:	e6 95       	lsr	r30
+    2bf6:	e6 95       	lsr	r30
+    2bf8:	90 e8       	ldi	r25, 0x80	; 128
+    2bfa:	e9 9f       	mul	r30, r25
+    2bfc:	f0 01       	movw	r30, r0
+    2bfe:	11 24       	eor	r1, r1
+    2c00:	e8 0f       	add	r30, r24
+    2c02:	f1 1d       	adc	r31, r1
+    2c04:	ea 58       	subi	r30, 0x8A	; 138
+    2c06:	ff 4f       	sbci	r31, 0xFF	; 255
+    2c08:	67 70       	andi	r22, 0x07	; 7
+    2c0a:	81 e0       	ldi	r24, 0x01	; 1
+    2c0c:	90 e0       	ldi	r25, 0x00	; 0
+    2c0e:	02 c0       	rjmp	.+4      	; 0x2c14 <display_draw_pixel+0x30>
+    2c10:	88 0f       	add	r24, r24
+    2c12:	99 1f       	adc	r25, r25
+    2c14:	6a 95       	dec	r22
+    2c16:	e2 f7       	brpl	.-8      	; 0x2c10 <display_draw_pixel+0x2c>
+    2c18:	90 81       	ld	r25, Z
+    2c1a:	89 2b       	or	r24, r25
+    2c1c:	80 83       	st	Z, r24
+    2c1e:	08 95       	ret
+    2c20:	e6 2f       	mov	r30, r22
+    2c22:	e6 95       	lsr	r30
+    2c24:	e6 95       	lsr	r30
+    2c26:	e6 95       	lsr	r30
+    2c28:	90 e8       	ldi	r25, 0x80	; 128
+    2c2a:	e9 9f       	mul	r30, r25
+    2c2c:	f0 01       	movw	r30, r0
+    2c2e:	11 24       	eor	r1, r1
+    2c30:	e8 0f       	add	r30, r24
+    2c32:	f1 1d       	adc	r31, r1
+    2c34:	ea 58       	subi	r30, 0x8A	; 138
+    2c36:	ff 4f       	sbci	r31, 0xFF	; 255
+    2c38:	67 70       	andi	r22, 0x07	; 7
+    2c3a:	81 e0       	ldi	r24, 0x01	; 1
+    2c3c:	90 e0       	ldi	r25, 0x00	; 0
+    2c3e:	02 c0       	rjmp	.+4      	; 0x2c44 <display_draw_pixel+0x60>
+    2c40:	88 0f       	add	r24, r24
+    2c42:	99 1f       	adc	r25, r25
+    2c44:	6a 95       	dec	r22
+    2c46:	e2 f7       	brpl	.-8      	; 0x2c40 <display_draw_pixel+0x5c>
+    2c48:	80 95       	com	r24
+    2c4a:	90 81       	ld	r25, Z
+    2c4c:	89 23       	and	r24, r25
+    2c4e:	80 83       	st	Z, r24
+    2c50:	08 95       	ret
+
+00002c52 <display_clear>:
+    2c52:	e6 e7       	ldi	r30, 0x76	; 118
+    2c54:	f0 e0       	ldi	r31, 0x00	; 0
+    2c56:	86 e7       	ldi	r24, 0x76	; 118
+    2c58:	94 e0       	ldi	r25, 0x04	; 4
+    2c5a:	11 92       	st	Z+, r1
+    2c5c:	e8 17       	cp	r30, r24
+    2c5e:	f9 07       	cpc	r31, r25
+    2c60:	e1 f7       	brne	.-8      	; 0x2c5a <display_clear+0x8>
+    2c62:	08 95       	ret
+
+00002c64 <display_draw_char>:
+    2c64:	2f 92       	push	r2
+    2c66:	3f 92       	push	r3
+    2c68:	4f 92       	push	r4
+    2c6a:	5f 92       	push	r5
+    2c6c:	6f 92       	push	r6
+    2c6e:	7f 92       	push	r7
+    2c70:	8f 92       	push	r8
+    2c72:	9f 92       	push	r9
+    2c74:	af 92       	push	r10
+    2c76:	bf 92       	push	r11
+    2c78:	cf 92       	push	r12
+    2c7a:	df 92       	push	r13
+    2c7c:	ef 92       	push	r14
+    2c7e:	ff 92       	push	r15
+    2c80:	0f 93       	push	r16
+    2c82:	1f 93       	push	r17
+    2c84:	cf 93       	push	r28
+    2c86:	df 93       	push	r29
+    2c88:	00 d0       	rcall	.+0      	; 0x2c8a <display_draw_char+0x26>
+    2c8a:	00 d0       	rcall	.+0      	; 0x2c8c <display_draw_char+0x28>
+    2c8c:	1f 92       	push	r1
+    2c8e:	cd b7       	in	r28, 0x3d	; 61
+    2c90:	de b7       	in	r29, 0x3e	; 62
+    2c92:	42 2e       	mov	r4, r18
+    2c94:	2d b7       	in	r18, 0x3d	; 61
+    2c96:	3e b7       	in	r19, 0x3e	; 62
+    2c98:	3d 83       	std	Y+5, r19	; 0x05
+    2c9a:	2c 83       	std	Y+4, r18	; 0x04
+    2c9c:	20 91 62 00 	lds	r18, 0x0062	; 0x800062 <char_height>
+    2ca0:	30 91 63 00 	lds	r19, 0x0063	; 0x800063 <char_height+0x1>
+    2ca4:	f9 01       	movw	r30, r18
+    2ca6:	e7 70       	andi	r30, 0x07	; 7
+    2ca8:	ff 27       	eor	r31, r31
+    2caa:	ef 2b       	or	r30, r31
+    2cac:	69 f4       	brne	.+26     	; 0x2cc8 <display_draw_char+0x64>
+    2cae:	59 01       	movw	r10, r18
+    2cb0:	33 23       	and	r19, r19
+    2cb2:	1c f4       	brge	.+6      	; 0x2cba <display_draw_char+0x56>
+    2cb4:	97 e0       	ldi	r25, 0x07	; 7
+    2cb6:	a9 0e       	add	r10, r25
+    2cb8:	b1 1c       	adc	r11, r1
+    2cba:	b5 94       	asr	r11
+    2cbc:	a7 94       	ror	r10
+    2cbe:	b5 94       	asr	r11
+    2cc0:	a7 94       	ror	r10
+    2cc2:	b5 94       	asr	r11
+    2cc4:	a7 94       	ror	r10
+    2cc6:	0f c0       	rjmp	.+30     	; 0x2ce6 <display_draw_char+0x82>
+    2cc8:	59 01       	movw	r10, r18
+    2cca:	33 23       	and	r19, r19
+    2ccc:	1c f4       	brge	.+6      	; 0x2cd4 <display_draw_char+0x70>
+    2cce:	a7 e0       	ldi	r26, 0x07	; 7
+    2cd0:	aa 0e       	add	r10, r26
+    2cd2:	b1 1c       	adc	r11, r1
+    2cd4:	b5 94       	asr	r11
+    2cd6:	a7 94       	ror	r10
+    2cd8:	b5 94       	asr	r11
+    2cda:	a7 94       	ror	r10
+    2cdc:	b5 94       	asr	r11
+    2cde:	a7 94       	ror	r10
+    2ce0:	bf ef       	ldi	r27, 0xFF	; 255
+    2ce2:	ab 1a       	sub	r10, r27
+    2ce4:	bb 0a       	sbc	r11, r27
+    2ce6:	20 91 64 00 	lds	r18, 0x0064	; 0x800064 <char_width>
+    2cea:	30 91 65 00 	lds	r19, 0x0065	; 0x800065 <char_width+0x1>
+    2cee:	a2 9e       	mul	r10, r18
+    2cf0:	80 01       	movw	r16, r0
+    2cf2:	a3 9e       	mul	r10, r19
+    2cf4:	10 0d       	add	r17, r0
+    2cf6:	b2 9e       	mul	r11, r18
+    2cf8:	10 0d       	add	r17, r0
+    2cfa:	11 24       	eor	r1, r1
+    2cfc:	2d b7       	in	r18, 0x3d	; 61
+    2cfe:	3e b7       	in	r19, 0x3e	; 62
+    2d00:	20 1b       	sub	r18, r16
+    2d02:	31 0b       	sbc	r19, r17
+    2d04:	0f b6       	in	r0, 0x3f	; 63
+    2d06:	f8 94       	cli
+    2d08:	3e bf       	out	0x3e, r19	; 62
+    2d0a:	0f be       	out	0x3f, r0	; 63
+    2d0c:	2d bf       	out	0x3d, r18	; 61
+    2d0e:	ad b7       	in	r26, 0x3d	; 61
+    2d10:	be b7       	in	r27, 0x3e	; 62
+    2d12:	11 96       	adiw	r26, 0x01	; 1
+    2d14:	4d 01       	movw	r8, r26
+    2d16:	50 e0       	ldi	r21, 0x00	; 0
+    2d18:	20 91 60 00 	lds	r18, 0x0060	; 0x800060 <__data_start>
+    2d1c:	30 91 61 00 	lds	r19, 0x0061	; 0x800061 <__data_start+0x1>
+    2d20:	42 1b       	sub	r20, r18
+    2d22:	53 0b       	sbc	r21, r19
+    2d24:	f8 01       	movw	r30, r16
+    2d26:	31 96       	adiw	r30, 0x01	; 1
+    2d28:	4e 9f       	mul	r20, r30
+    2d2a:	90 01       	movw	r18, r0
+    2d2c:	4f 9f       	mul	r20, r31
+    2d2e:	30 0d       	add	r19, r0
+    2d30:	5e 9f       	mul	r21, r30
+    2d32:	30 0d       	add	r19, r0
+    2d34:	11 24       	eor	r1, r1
+    2d36:	f9 01       	movw	r30, r18
+    2d38:	ee 0f       	add	r30, r30
+    2d3a:	ff 1f       	adc	r31, r31
+    2d3c:	ec 5a       	subi	r30, 0xAC	; 172
+    2d3e:	ff 4f       	sbci	r31, 0xFF	; 255
+    2d40:	94 91       	lpm	r25, Z
+    2d42:	9b 83       	std	Y+3, r25	; 0x03
+    2d44:	10 16       	cp	r1, r16
+    2d46:	11 06       	cpc	r1, r17
+    2d48:	84 f4       	brge	.+32     	; 0x2d6a <display_draw_char+0x106>
+    2d4a:	f9 01       	movw	r30, r18
+    2d4c:	ee 0f       	add	r30, r30
+    2d4e:	ff 1f       	adc	r31, r31
+    2d50:	ea 5a       	subi	r30, 0xAA	; 170
+    2d52:	ff 4f       	sbci	r31, 0xFF	; 255
+    2d54:	ad 01       	movw	r20, r26
+    2d56:	0a 0f       	add	r16, r26
+    2d58:	1b 1f       	adc	r17, r27
+    2d5a:	94 91       	lpm	r25, Z
+    2d5c:	da 01       	movw	r26, r20
+    2d5e:	9d 93       	st	X+, r25
+    2d60:	ad 01       	movw	r20, r26
+    2d62:	32 96       	adiw	r30, 0x02	; 2
+    2d64:	a0 17       	cp	r26, r16
+    2d66:	b1 07       	cpc	r27, r17
+    2d68:	c1 f7       	brne	.-16     	; 0x2d5a <display_draw_char+0xf6>
+    2d6a:	bb 81       	ldd	r27, Y+3	; 0x03
+    2d6c:	bb 23       	and	r27, r27
+    2d6e:	09 f4       	brne	.+2      	; 0x2d72 <display_draw_char+0x10e>
+    2d70:	43 c0       	rjmp	.+134    	; 0x2df8 <display_draw_char+0x194>
+    2d72:	b8 0f       	add	r27, r24
+    2d74:	b9 83       	std	Y+1, r27	; 0x01
+    2d76:	58 2e       	mov	r5, r24
+    2d78:	c1 2c       	mov	r12, r1
+    2d7a:	d1 2c       	mov	r13, r1
+    2d7c:	6a 83       	std	Y+2, r22	; 0x02
+    2d7e:	22 24       	eor	r2, r2
+    2d80:	23 94       	inc	r2
+    2d82:	33 24       	eor	r3, r3
+    2d84:	33 94       	inc	r3
+    2d86:	34 24       	eor	r3, r4
+    2d88:	28 c0       	rjmp	.+80     	; 0x2dda <display_draw_char+0x176>
+    2d8a:	f7 01       	movw	r30, r14
+    2d8c:	e6 0d       	add	r30, r6
+    2d8e:	f1 1d       	adc	r31, r1
+    2d90:	80 81       	ld	r24, Z
+    2d92:	81 23       	and	r24, r17
+    2d94:	31 f0       	breq	.+12     	; 0x2da2 <display_draw_char+0x13e>
+    2d96:	43 2d       	mov	r20, r3
+    2d98:	67 2d       	mov	r22, r7
+    2d9a:	85 2d       	mov	r24, r5
+    2d9c:	0e 94 f2 15 	call	0x2be4	; 0x2be4 <display_draw_pixel>
+    2da0:	05 c0       	rjmp	.+10     	; 0x2dac <display_draw_char+0x148>
+    2da2:	44 2d       	mov	r20, r4
+    2da4:	67 2d       	mov	r22, r7
+    2da6:	85 2d       	mov	r24, r5
+    2da8:	0e 94 f2 15 	call	0x2be4	; 0x2be4 <display_draw_pixel>
+    2dac:	10 38       	cpi	r17, 0x80	; 128
+    2dae:	19 f4       	brne	.+6      	; 0x2db6 <display_draw_char+0x152>
+    2db0:	63 94       	inc	r6
+    2db2:	12 2d       	mov	r17, r2
+    2db4:	01 c0       	rjmp	.+2      	; 0x2db8 <display_draw_char+0x154>
+    2db6:	11 0f       	add	r17, r17
+    2db8:	0f 5f       	subi	r16, 0xFF	; 255
+    2dba:	73 94       	inc	r7
+    2dbc:	20 2f       	mov	r18, r16
+    2dbe:	30 e0       	ldi	r19, 0x00	; 0
+    2dc0:	80 91 62 00 	lds	r24, 0x0062	; 0x800062 <char_height>
+    2dc4:	90 91 63 00 	lds	r25, 0x0063	; 0x800063 <char_height+0x1>
+    2dc8:	28 17       	cp	r18, r24
+    2dca:	39 07       	cpc	r19, r25
+    2dcc:	f4 f2       	brlt	.-68     	; 0x2d8a <display_draw_char+0x126>
+    2dce:	53 94       	inc	r5
+    2dd0:	ca 0c       	add	r12, r10
+    2dd2:	db 1c       	adc	r13, r11
+    2dd4:	29 81       	ldd	r18, Y+1	; 0x01
+    2dd6:	52 16       	cp	r5, r18
+    2dd8:	79 f0       	breq	.+30     	; 0x2df8 <display_draw_char+0x194>
+    2dda:	80 91 62 00 	lds	r24, 0x0062	; 0x800062 <char_height>
+    2dde:	90 91 63 00 	lds	r25, 0x0063	; 0x800063 <char_height+0x1>
+    2de2:	18 16       	cp	r1, r24
+    2de4:	19 06       	cpc	r1, r25
+    2de6:	9c f7       	brge	.-26     	; 0x2dce <display_draw_char+0x16a>
+    2de8:	7a 80       	ldd	r7, Y+2	; 0x02
+    2dea:	00 e0       	ldi	r16, 0x00	; 0
+    2dec:	61 2c       	mov	r6, r1
+    2dee:	11 e0       	ldi	r17, 0x01	; 1
+    2df0:	74 01       	movw	r14, r8
+    2df2:	ec 0c       	add	r14, r12
+    2df4:	fd 1c       	adc	r15, r13
+    2df6:	c9 cf       	rjmp	.-110    	; 0x2d8a <display_draw_char+0x126>
+    2df8:	8b 81       	ldd	r24, Y+3	; 0x03
+    2dfa:	ac 81       	ldd	r26, Y+4	; 0x04
+    2dfc:	bd 81       	ldd	r27, Y+5	; 0x05
+    2dfe:	0f b6       	in	r0, 0x3f	; 63
+    2e00:	f8 94       	cli
+    2e02:	be bf       	out	0x3e, r27	; 62
+    2e04:	0f be       	out	0x3f, r0	; 63
+    2e06:	ad bf       	out	0x3d, r26	; 61
+    2e08:	0f 90       	pop	r0
+    2e0a:	0f 90       	pop	r0
+    2e0c:	0f 90       	pop	r0
+    2e0e:	0f 90       	pop	r0
+    2e10:	0f 90       	pop	r0
+    2e12:	df 91       	pop	r29
+    2e14:	cf 91       	pop	r28
+    2e16:	1f 91       	pop	r17
+    2e18:	0f 91       	pop	r16
+    2e1a:	ff 90       	pop	r15
+    2e1c:	ef 90       	pop	r14
+    2e1e:	df 90       	pop	r13
+    2e20:	cf 90       	pop	r12
+    2e22:	bf 90       	pop	r11
+    2e24:	af 90       	pop	r10
+    2e26:	9f 90       	pop	r9
+    2e28:	8f 90       	pop	r8
+    2e2a:	7f 90       	pop	r7
+    2e2c:	6f 90       	pop	r6
+    2e2e:	5f 90       	pop	r5
+    2e30:	4f 90       	pop	r4
+    2e32:	3f 90       	pop	r3
+    2e34:	2f 90       	pop	r2
+    2e36:	08 95       	ret
+
+00002e38 <display_draw_string>:
+    2e38:	ff 92       	push	r15
+    2e3a:	0f 93       	push	r16
+    2e3c:	1f 93       	push	r17
+    2e3e:	cf 93       	push	r28
+    2e40:	df 93       	push	r29
+    2e42:	c8 2f       	mov	r28, r24
+    2e44:	d6 2f       	mov	r29, r22
+    2e46:	fa 01       	movw	r30, r20
+    2e48:	f2 2e       	mov	r15, r18
+    2e4a:	40 81       	ld	r20, Z
+    2e4c:	44 23       	and	r20, r20
+    2e4e:	81 f0       	breq	.+32     	; 0x2e70 <display_draw_string+0x38>
+    2e50:	8f 01       	movw	r16, r30
+    2e52:	0f 5f       	subi	r16, 0xFF	; 255
+    2e54:	1f 4f       	sbci	r17, 0xFF	; 255
+    2e56:	2f 2d       	mov	r18, r15
+    2e58:	6d 2f       	mov	r22, r29
+    2e5a:	8c 2f       	mov	r24, r28
+    2e5c:	0e 94 32 16 	call	0x2c64	; 0x2c64 <display_draw_char>
+    2e60:	8c 0f       	add	r24, r28
+    2e62:	c1 e0       	ldi	r28, 0x01	; 1
+    2e64:	c8 0f       	add	r28, r24
+    2e66:	f8 01       	movw	r30, r16
+    2e68:	41 91       	ld	r20, Z+
+    2e6a:	8f 01       	movw	r16, r30
+    2e6c:	41 11       	cpse	r20, r1
+    2e6e:	f3 cf       	rjmp	.-26     	; 0x2e56 <display_draw_string+0x1e>
+    2e70:	df 91       	pop	r29
+    2e72:	cf 91       	pop	r28
+    2e74:	1f 91       	pop	r17
+    2e76:	0f 91       	pop	r16
+    2e78:	ff 90       	pop	r15
+    2e7a:	08 95       	ret
+
+00002e7c <display_draw_line>:
+
+void display_draw_line(int x1, int y1,int x2,int y2)
+{
+    2e7c:	4f 92       	push	r4
+    2e7e:	5f 92       	push	r5
+    2e80:	6f 92       	push	r6
+    2e82:	7f 92       	push	r7
+    2e84:	8f 92       	push	r8
+    2e86:	9f 92       	push	r9
+    2e88:	af 92       	push	r10
+    2e8a:	bf 92       	push	r11
+    2e8c:	cf 92       	push	r12
+    2e8e:	df 92       	push	r13
+    2e90:	ef 92       	push	r14
+    2e92:	ff 92       	push	r15
+    2e94:	0f 93       	push	r16
+    2e96:	1f 93       	push	r17
+    2e98:	cf 93       	push	r28
+    2e9a:	df 93       	push	r29
+    2e9c:	ec 01       	movw	r28, r24
+    2e9e:	4b 01       	movw	r8, r22
+    2ea0:	3a 01       	movw	r6, r20
+	int dx = x2 - x1;
+    2ea2:	2a 01       	movw	r4, r20
+    2ea4:	48 1a       	sub	r4, r24
+    2ea6:	59 0a       	sbc	r5, r25
+	int dy = y2 - y1;
+    2ea8:	69 01       	movw	r12, r18
+    2eaa:	c6 1a       	sub	r12, r22
+    2eac:	d7 0a       	sbc	r13, r23
+	int d = dy * 2 - dx;
+    2eae:	56 01       	movw	r10, r12
+    2eb0:	aa 0c       	add	r10, r10
+    2eb2:	bb 1c       	adc	r11, r11
+    2eb4:	85 01       	movw	r16, r10
+    2eb6:	04 19       	sub	r16, r4
+    2eb8:	15 09       	sbc	r17, r5
+
+	display_draw_pixel(x1,y1,1);
+    2eba:	41 e0       	ldi	r20, 0x01	; 1
+    2ebc:	0e 94 f2 15 	call	0x2be4	; 0x2be4 <display_draw_pixel>
+	while (x1 < x2)
+    2ec0:	c6 15       	cp	r28, r6
+    2ec2:	d7 05       	cpc	r29, r7
+    2ec4:	0c f5       	brge	.+66     	; 0x2f08 <display_draw_line+0x8c>
+			else
+			y1++;
+		}
+		else
+		{
+			d += (dy - dx) * 2;
+    2ec6:	76 01       	movw	r14, r12
+    2ec8:	e4 18       	sub	r14, r4
+    2eca:	f5 08       	sbc	r15, r5
+    2ecc:	ee 0c       	add	r14, r14
+    2ece:	ff 1c       	adc	r15, r15
+	int d = dy * 2 - dx;
+
+	display_draw_pixel(x1,y1,1);
+	while (x1 < x2)
+	{
+		if (d <= 0)
+    2ed0:	10 16       	cp	r1, r16
+    2ed2:	11 06       	cpc	r1, r17
+    2ed4:	5c f0       	brlt	.+22     	; 0x2eec <display_draw_line+0x70>
+		{
+			d += (dy * 2);
+    2ed6:	0a 0d       	add	r16, r10
+    2ed8:	1b 1d       	adc	r17, r11
+			if(dx > dy)
+    2eda:	c4 14       	cp	r12, r4
+    2edc:	d5 04       	cpc	r13, r5
+    2ede:	14 f4       	brge	.+4      	; 0x2ee4 <display_draw_line+0x68>
+			x1++;
+    2ee0:	21 96       	adiw	r28, 0x01	; 1
+    2ee2:	0a c0       	rjmp	.+20     	; 0x2ef8 <display_draw_line+0x7c>
+			else
+			y1++;
+    2ee4:	8f ef       	ldi	r24, 0xFF	; 255
+    2ee6:	88 1a       	sub	r8, r24
+    2ee8:	98 0a       	sbc	r9, r24
+    2eea:	06 c0       	rjmp	.+12     	; 0x2ef8 <display_draw_line+0x7c>
+		}
+		else
+		{
+			d += (dy - dx) * 2;
+    2eec:	0e 0d       	add	r16, r14
+    2eee:	1f 1d       	adc	r17, r15
+			x1++;
+    2ef0:	21 96       	adiw	r28, 0x01	; 1
+			y1++;
+    2ef2:	8f ef       	ldi	r24, 0xFF	; 255
+    2ef4:	88 1a       	sub	r8, r24
+    2ef6:	98 0a       	sbc	r9, r24
+		}
+		display_draw_pixel(x1,y1,1);
+    2ef8:	41 e0       	ldi	r20, 0x01	; 1
+    2efa:	68 2d       	mov	r22, r8
+    2efc:	8c 2f       	mov	r24, r28
+    2efe:	0e 94 f2 15 	call	0x2be4	; 0x2be4 <display_draw_pixel>
+	int dx = x2 - x1;
+	int dy = y2 - y1;
+	int d = dy * 2 - dx;
+
+	display_draw_pixel(x1,y1,1);
+	while (x1 < x2)
+    2f02:	c6 15       	cp	r28, r6
+    2f04:	d7 05       	cpc	r29, r7
+    2f06:	24 f3       	brlt	.-56     	; 0x2ed0 <display_draw_line+0x54>
+			x1++;
+			y1++;
+		}
+		display_draw_pixel(x1,y1,1);
+	}
+}
+    2f08:	df 91       	pop	r29
+    2f0a:	cf 91       	pop	r28
+    2f0c:	1f 91       	pop	r17
+    2f0e:	0f 91       	pop	r16
+    2f10:	ff 90       	pop	r15
+    2f12:	ef 90       	pop	r14
+    2f14:	df 90       	pop	r13
+    2f16:	cf 90       	pop	r12
+    2f18:	bf 90       	pop	r11
+    2f1a:	af 90       	pop	r10
+    2f1c:	9f 90       	pop	r9
+    2f1e:	8f 90       	pop	r8
+    2f20:	7f 90       	pop	r7
+    2f22:	6f 90       	pop	r6
+    2f24:	5f 90       	pop	r5
+    2f26:	4f 90       	pop	r4
+    2f28:	08 95       	ret
+
+00002f2a <main>:
+
+int main(void)
+{
+	ssd1306_init();
+    2f2a:	0e 94 d3 17 	call	0x2fa6	; 0x2fa6 <ssd1306_init>
+
+	display_clear();
+    2f2e:	0e 94 29 16 	call	0x2c52	; 0x2c52 <display_clear>
+	display_draw_string(19,10,"EmbedoS",0);
+    2f32:	20 e0       	ldi	r18, 0x00	; 0
+    2f34:	46 e6       	ldi	r20, 0x66	; 102
+    2f36:	50 e0       	ldi	r21, 0x00	; 0
+    2f38:	6a e0       	ldi	r22, 0x0A	; 10
+    2f3a:	83 e1       	ldi	r24, 0x13	; 19
+    2f3c:	0e 94 1c 17 	call	0x2e38	; 0x2e38 <display_draw_string>
+	display_draw_string(35,40,"OLED",0);
+    2f40:	20 e0       	ldi	r18, 0x00	; 0
+    2f42:	4e e6       	ldi	r20, 0x6E	; 110
+    2f44:	50 e0       	ldi	r21, 0x00	; 0
+    2f46:	68 e2       	ldi	r22, 0x28	; 40
+    2f48:	83 e2       	ldi	r24, 0x23	; 35
+    2f4a:	0e 94 1c 17 	call	0x2e38	; 0x2e38 <display_draw_string>
+	ssd1306_draw_buffer(display_buffer);
+    2f4e:	86 e7       	ldi	r24, 0x76	; 118
+    2f50:	90 e0       	ldi	r25, 0x00	; 0
+    2f52:	0e 94 22 18 	call	0x3044	; 0x3044 <ssd1306_draw_buffer>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+    2f56:	2f ef       	ldi	r18, 0xFF	; 255
+    2f58:	80 e7       	ldi	r24, 0x70	; 112
+    2f5a:	92 e0       	ldi	r25, 0x02	; 2
+    2f5c:	21 50       	subi	r18, 0x01	; 1
+    2f5e:	80 40       	sbci	r24, 0x00	; 0
+    2f60:	90 40       	sbci	r25, 0x00	; 0
+    2f62:	e1 f7       	brne	.-8      	; 0x2f5c <main+0x32>
+    2f64:	00 c0       	rjmp	.+0      	; 0x2f66 <main+0x3c>
+    2f66:	00 00       	nop
+
+		display_clear();
+		display_draw_circle(60,30,20,0,0);
+		ssd1306_draw_buffer(display_buffer);
+		_delay_ms(100);*/
+		display_clear();
+    2f68:	0e 94 29 16 	call	0x2c52	; 0x2c52 <display_clear>
+		display_draw_line(0,0,10,64);
+    2f6c:	20 e4       	ldi	r18, 0x40	; 64
+    2f6e:	30 e0       	ldi	r19, 0x00	; 0
+    2f70:	4a e0       	ldi	r20, 0x0A	; 10
+    2f72:	50 e0       	ldi	r21, 0x00	; 0
+    2f74:	60 e0       	ldi	r22, 0x00	; 0
+    2f76:	70 e0       	ldi	r23, 0x00	; 0
+    2f78:	80 e0       	ldi	r24, 0x00	; 0
+    2f7a:	90 e0       	ldi	r25, 0x00	; 0
+    2f7c:	0e 94 3e 17 	call	0x2e7c	; 0x2e7c <display_draw_line>
+		ssd1306_draw_buffer(display_buffer);
+    2f80:	86 e7       	ldi	r24, 0x76	; 118
+    2f82:	90 e0       	ldi	r25, 0x00	; 0
+    2f84:	0e 94 22 18 	call	0x3044	; 0x3044 <ssd1306_draw_buffer>
+	}
+    2f88:	ef cf       	rjmp	.-34     	; 0x2f68 <main+0x3e>
+
+00002f8a <send_command>:
+ */ 
+#include "i2c.h"
+#include "ssd1306.h"
+
+void send_command(uint8_t command)
+{
+    2f8a:	cf 93       	push	r28
+    2f8c:	c8 2f       	mov	r28, r24
+    i2c_start();
+    2f8e:	0e 94 d5 15 	call	0x2baa	; 0x2baa <i2c_start>
+    i2c_write(0);
+    2f92:	80 e0       	ldi	r24, 0x00	; 0
+    2f94:	0e 94 e4 15 	call	0x2bc8	; 0x2bc8 <i2c_write>
+    i2c_write(command);
+    2f98:	8c 2f       	mov	r24, r28
+    2f9a:	0e 94 e4 15 	call	0x2bc8	; 0x2bc8 <i2c_write>
+    i2c_stop();
+    2f9e:	0e 94 ec 15 	call	0x2bd8	; 0x2bd8 <i2c_stop>
+}
+    2fa2:	cf 91       	pop	r28
+    2fa4:	08 95       	ret
+
+00002fa6 <ssd1306_init>:
+
+void ssd1306_init()
+{
+    i2c_init(SSD1306_DEFAULT_ADDRESS);
+    2fa6:	88 e7       	ldi	r24, 0x78	; 120
+    2fa8:	0e 94 cf 15 	call	0x2b9e	; 0x2b9e <i2c_init>
+    
+    // Turn display off
+    send_command(SSD1306_DISPLAYOFF);
+    2fac:	8e ea       	ldi	r24, 0xAE	; 174
+    2fae:	0e 94 c5 17 	call	0x2f8a	; 0x2f8a <send_command>
+
+    send_command(SSD1306_SETDISPLAYCLOCKDIV);
+    2fb2:	85 ed       	ldi	r24, 0xD5	; 213
+    2fb4:	0e 94 c5 17 	call	0x2f8a	; 0x2f8a <send_command>
+    send_command(0x80);
+    2fb8:	80 e8       	ldi	r24, 0x80	; 128
+    2fba:	0e 94 c5 17 	call	0x2f8a	; 0x2f8a <send_command>
+
+    send_command(SSD1306_SETMULTIPLEX);
+    2fbe:	88 ea       	ldi	r24, 0xA8	; 168
+    2fc0:	0e 94 c5 17 	call	0x2f8a	; 0x2f8a <send_command>
+    send_command(0x3F);
+    2fc4:	8f e3       	ldi	r24, 0x3F	; 63
+    2fc6:	0e 94 c5 17 	call	0x2f8a	; 0x2f8a <send_command>
+    
+    send_command(SSD1306_SETDISPLAYOFFSET);
+    2fca:	83 ed       	ldi	r24, 0xD3	; 211
+    2fcc:	0e 94 c5 17 	call	0x2f8a	; 0x2f8a <send_command>
+    send_command(0x00);
+    2fd0:	80 e0       	ldi	r24, 0x00	; 0
+    2fd2:	0e 94 c5 17 	call	0x2f8a	; 0x2f8a <send_command>
+    
+    send_command(SSD1306_SETSTARTLINE | 0x00);
+    2fd6:	80 e4       	ldi	r24, 0x40	; 64
+    2fd8:	0e 94 c5 17 	call	0x2f8a	; 0x2f8a <send_command>
+    
+    // We use internal charge pump
+    send_command(SSD1306_CHARGEPUMP);
+    2fdc:	8d e8       	ldi	r24, 0x8D	; 141
+    2fde:	0e 94 c5 17 	call	0x2f8a	; 0x2f8a <send_command>
+    send_command(0x14);
+    2fe2:	84 e1       	ldi	r24, 0x14	; 20
+    2fe4:	0e 94 c5 17 	call	0x2f8a	; 0x2f8a <send_command>
+    
+    // Horizontal memory mode
+    send_command(SSD1306_MEMORYMODE);
+    2fe8:	80 e2       	ldi	r24, 0x20	; 32
+    2fea:	0e 94 c5 17 	call	0x2f8a	; 0x2f8a <send_command>
+    send_command(0x00);
+    2fee:	80 e0       	ldi	r24, 0x00	; 0
+    2ff0:	0e 94 c5 17 	call	0x2f8a	; 0x2f8a <send_command>
+    
+    send_command(SSD1306_SEGREMAP | 0x1);
+    2ff4:	81 ea       	ldi	r24, 0xA1	; 161
+    2ff6:	0e 94 c5 17 	call	0x2f8a	; 0x2f8a <send_command>
+
+    send_command(SSD1306_COMSCANDEC);
+    2ffa:	88 ec       	ldi	r24, 0xC8	; 200
+    2ffc:	0e 94 c5 17 	call	0x2f8a	; 0x2f8a <send_command>
+
+    send_command(SSD1306_SETCOMPINS);
+    3000:	8a ed       	ldi	r24, 0xDA	; 218
+    3002:	0e 94 c5 17 	call	0x2f8a	; 0x2f8a <send_command>
+    send_command(0x12);
+    3006:	82 e1       	ldi	r24, 0x12	; 18
+    3008:	0e 94 c5 17 	call	0x2f8a	; 0x2f8a <send_command>
+
+    // Max contrast
+    send_command(SSD1306_SETCONTRAST);
+    300c:	81 e8       	ldi	r24, 0x81	; 129
+    300e:	0e 94 c5 17 	call	0x2f8a	; 0x2f8a <send_command>
+    send_command(0xCF);
+    3012:	8f ec       	ldi	r24, 0xCF	; 207
+    3014:	0e 94 c5 17 	call	0x2f8a	; 0x2f8a <send_command>
+
+    send_command(SSD1306_SETPRECHARGE);
+    3018:	89 ed       	ldi	r24, 0xD9	; 217
+    301a:	0e 94 c5 17 	call	0x2f8a	; 0x2f8a <send_command>
+    send_command(0xF1);
+    301e:	81 ef       	ldi	r24, 0xF1	; 241
+    3020:	0e 94 c5 17 	call	0x2f8a	; 0x2f8a <send_command>
+
+    send_command(SSD1306_SETVCOMDETECT);
+    3024:	8b ed       	ldi	r24, 0xDB	; 219
+    3026:	0e 94 c5 17 	call	0x2f8a	; 0x2f8a <send_command>
+    send_command(0x40);
+    302a:	80 e4       	ldi	r24, 0x40	; 64
+    302c:	0e 94 c5 17 	call	0x2f8a	; 0x2f8a <send_command>
+
+    send_command(SSD1306_DISPLAYALLON_RESUME);
+    3030:	84 ea       	ldi	r24, 0xA4	; 164
+    3032:	0e 94 c5 17 	call	0x2f8a	; 0x2f8a <send_command>
+
+    // Non-inverted display
+    send_command(SSD1306_NORMALDISPLAY);
+    3036:	86 ea       	ldi	r24, 0xA6	; 166
+    3038:	0e 94 c5 17 	call	0x2f8a	; 0x2f8a <send_command>
+
+    // Turn display back on
+    send_command(SSD1306_DISPLAYON);
+    303c:	8f ea       	ldi	r24, 0xAF	; 175
+    303e:	0e 94 c5 17 	call	0x2f8a	; 0x2f8a <send_command>
+    3042:	08 95       	ret
+
+00003044 <ssd1306_draw_buffer>:
+}
+
+void ssd1306_draw_buffer(const uint8_t *buffer)
+{
+    3044:	ef 92       	push	r14
+    3046:	ff 92       	push	r15
+    3048:	0f 93       	push	r16
+    304a:	1f 93       	push	r17
+    304c:	cf 93       	push	r28
+    304e:	df 93       	push	r29
+    3050:	7c 01       	movw	r14, r24
+    send_command(SSD1306_COLUMNADDR);
+    3052:	81 e2       	ldi	r24, 0x21	; 33
+    3054:	0e 94 c5 17 	call	0x2f8a	; 0x2f8a <send_command>
+    send_command(0x00);
+    3058:	80 e0       	ldi	r24, 0x00	; 0
+    305a:	0e 94 c5 17 	call	0x2f8a	; 0x2f8a <send_command>
+    send_command(0x7F);
+    305e:	8f e7       	ldi	r24, 0x7F	; 127
+    3060:	0e 94 c5 17 	call	0x2f8a	; 0x2f8a <send_command>
+
+    send_command(SSD1306_PAGEADDR);
+    3064:	82 e2       	ldi	r24, 0x22	; 34
+    3066:	0e 94 c5 17 	call	0x2f8a	; 0x2f8a <send_command>
+    send_command(0x00);
+    306a:	80 e0       	ldi	r24, 0x00	; 0
+    306c:	0e 94 c5 17 	call	0x2f8a	; 0x2f8a <send_command>
+    send_command(0x07);
+    3070:	87 e0       	ldi	r24, 0x07	; 7
+    3072:	0e 94 c5 17 	call	0x2f8a	; 0x2f8a <send_command>
+    3076:	e7 01       	movw	r28, r14
+    3078:	8c ef       	ldi	r24, 0xFC	; 252
+    307a:	f8 1a       	sub	r15, r24
+
+    // We have to send the buffer as 16 bytes packets
+    // Our buffer is 1024 bytes long, 1024/16 = 64
+    // We have to send 64 packets
+    for (uint8_t packet = 0; packet < 64; packet++) {
+        i2c_start();
+    307c:	0e 94 d5 15 	call	0x2baa	; 0x2baa <i2c_start>
+        i2c_write(0x40);
+    3080:	80 e4       	ldi	r24, 0x40	; 64
+    3082:	0e 94 e4 15 	call	0x2bc8	; 0x2bc8 <i2c_write>
+    3086:	8e 01       	movw	r16, r28
+    3088:	00 5f       	subi	r16, 0xF0	; 240
+    308a:	1f 4f       	sbci	r17, 0xFF	; 255
+        for (uint8_t packet_byte = 0; packet_byte < 16; ++packet_byte) {
+            i2c_write(buffer[packet*16+packet_byte]);
+    308c:	89 91       	ld	r24, Y+
+    308e:	0e 94 e4 15 	call	0x2bc8	; 0x2bc8 <i2c_write>
+    // Our buffer is 1024 bytes long, 1024/16 = 64
+    // We have to send 64 packets
+    for (uint8_t packet = 0; packet < 64; packet++) {
+        i2c_start();
+        i2c_write(0x40);
+        for (uint8_t packet_byte = 0; packet_byte < 16; ++packet_byte) {
+    3092:	c0 17       	cp	r28, r16
+    3094:	d1 07       	cpc	r29, r17
+    3096:	d1 f7       	brne	.-12     	; 0x308c <ssd1306_draw_buffer+0x48>
+            i2c_write(buffer[packet*16+packet_byte]);
+        }
+        i2c_stop();
+    3098:	0e 94 ec 15 	call	0x2bd8	; 0x2bd8 <i2c_stop>
+    309c:	e8 01       	movw	r28, r16
+    send_command(0x07);
+
+    // We have to send the buffer as 16 bytes packets
+    // Our buffer is 1024 bytes long, 1024/16 = 64
+    // We have to send 64 packets
+    for (uint8_t packet = 0; packet < 64; packet++) {
+    309e:	0e 15       	cp	r16, r14
+    30a0:	1f 05       	cpc	r17, r15
+    30a2:	61 f7       	brne	.-40     	; 0x307c <ssd1306_draw_buffer+0x38>
+        for (uint8_t packet_byte = 0; packet_byte < 16; ++packet_byte) {
+            i2c_write(buffer[packet*16+packet_byte]);
+        }
+        i2c_stop();
+    }
+    30a4:	df 91       	pop	r29
+    30a6:	cf 91       	pop	r28
+    30a8:	1f 91       	pop	r17
+    30aa:	0f 91       	pop	r16
+    30ac:	ff 90       	pop	r15
+    30ae:	ef 90       	pop	r14
+    30b0:	08 95       	ret
+
+000030b2 <_exit>:
+    30b2:	f8 94       	cli
+
+000030b4 <__stop_program>:
+    30b4:	ff cf       	rjmp	.-2      	; 0x30b4 <__stop_program>
